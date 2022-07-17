@@ -20,6 +20,9 @@ public class Word extends Methods {
         boolean isMatch = false;
         StringBuilder stb = new StringBuilder();
 
+        // -------------------------------------------------------------------------------------
+
+
 //        for (int i = 0; i < input.length; i++) {
 //            if (input[i].equals(word)) {
 //                countMatches++;
@@ -49,6 +52,9 @@ public class Word extends Methods {
 //            }
 //            i++;
 //        }
+
+        // -------------------------------------------------------------------------------------
+
 
         System.out.println(text1);
         for (int j = 0; j < text1.length(); j++) {
