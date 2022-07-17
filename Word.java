@@ -17,7 +17,6 @@ public class Word extends Methods {
         String[] input1 = text.split(" ");
 
         String word = "opa";
-        int countMatches = 0, i = 0, k = 0, countChar = 0;
         boolean isMatch = false;
         StringBuilder stb = new StringBuilder();
 
@@ -52,7 +51,7 @@ public class Word extends Methods {
 //        }
 
         for (int j = 0; j < text1.length(); j++) {
-            k = 0;
+           int k = 0;
             stb.delete(0, word.length());
             stb.append(text1.charAt(j));
             k++;
@@ -60,7 +59,7 @@ public class Word extends Methods {
                 stb.append(text1.charAt(l));
                 k++;                            //Ред 62: Дължината на създадения stb съвпада ли с дължината на думата?
                 if ((k % word.length() == 0) && l < text1.length() ) {
-                    countChar = 0;
+                   int countChar = 0;
                     for (int t = 0; t < word.length(); t++) {
                         if (stb.charAt(t) == word.charAt(t)) {
                             countChar++;
