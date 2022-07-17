@@ -11,12 +11,12 @@ public class Word extends Methods {
 
         // Има ли я думата "word" в низа "text1"...?
 
+        String word = "djf";
         String text = "alabala opa opa";
         String text1 = "alavopadksjflsdjf";
         String[] input = text.split(" ");
         String[] input1 = text.split(" ");
 
-        String word = "djf";
         boolean isMatch = false;
         StringBuilder stb = new StringBuilder();
 
@@ -54,7 +54,6 @@ public class Word extends Methods {
 //        }
 
         // -------------------------------------------------------------------------------------
-
 
         System.out.println(text1);
         for (int j = 0; j < text1.length(); j++) {
