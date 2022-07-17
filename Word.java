@@ -58,7 +58,7 @@ public class Word extends Methods {
             k++;
             for (int l = j + 1; l < text1.length(); l++) {
                 stb.append(text1.charAt(l));
-                k++;                            //Ред 59: Дължината на създадения stb съвпада ли с дължината на думата?
+                k++;                            //Ред 62: Дължината на създадения stb съвпада ли с дължината на думата?
                 if ((k % word.length() == 0) && l < text1.length() ) {
                     countChar = 0;
                     for (int t = 0; t < word.length(); t++) {
