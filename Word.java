@@ -18,6 +18,7 @@ public class Word extends Methods {
         String[] input1 = text.split(" ");
 
         boolean isMatch = false;
+        int count = 0;
         StringBuilder stb = new StringBuilder();
 
         // -------------------------------------------------------------------------------------
@@ -79,6 +80,7 @@ public class Word extends Methods {
                     }
                     if (countChar == word.length()) {
                         isMatch = true;
+                        count++;
                     }
                     stb.delete(1, word.length());
                     k -= (word.length() - 1);              // "Маха" в случая двете последно добавени букви.
@@ -86,6 +88,7 @@ public class Word extends Methods {
             }
         }
         if (isMatch) {
+            System.out.println("Occurs in  " + count + " places.");
             System.out.print("There is it ;)");
         } else System.out.println(";(");
 
