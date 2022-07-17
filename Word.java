@@ -16,7 +16,7 @@ public class Word extends Methods {
         String[] input = text.split(" ");
         String[] input1 = text.split(" ");
 
-        String word = "opa";
+        String word = "djf";
         boolean isMatch = false;
         StringBuilder stb = new StringBuilder();
 
@@ -51,15 +51,15 @@ public class Word extends Methods {
 //        }
 
         for (int j = 0; j < text1.length(); j++) {
-           int k = 0;
+            int k = 0;
             stb.delete(0, word.length());
             stb.append(text1.charAt(j));
             k++;
             for (int l = j + 1; l < text1.length(); l++) {
                 stb.append(text1.charAt(l));
                 k++;                            //Ред 62: Дължината на създадения stb съвпада ли с дължината на думата?
-                if ((k % word.length() == 0) && l < text1.length() ) {
-                   int countChar = 0;
+                if ((k % word.length() == 0) && l < text1.length()) {
+                    int countChar = 0;
                     for (int t = 0; t < word.length(); t++) {
                         if (stb.charAt(t) == word.charAt(t)) {
                             countChar++;
@@ -69,7 +69,7 @@ public class Word extends Methods {
                         isMatch = true;
                     }
                     stb.delete(1, word.length());
-                    k = k - (word.length() - 1);              // Маха в случая двете последно добавени букви.
+                    k -= (word.length() - 1);              // Маха в случая двете последно добавени букви.
                 }
             }
         }
