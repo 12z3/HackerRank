@@ -19,27 +19,35 @@ public class MarsHR extends Methods {
         String message = "SOS";
         String literal = "";
         StringBuilder stb = new StringBuilder();
+        String[] words = new String[input.length() / 3];
 
-        int k = 0, j = 0, r = 0;
+        int index = 0, wordCount = 0, p = 0, j = 0;
 
         while (j < input.length()) {
-            stb.append(input.charAt(k));
-            literal += input.charAt(k);
-            k++;
+            stb.append(input.charAt(index));                           // Добавяй буквите на input в stb.
+            literal += input.charAt(index);
+            index++;
 
-            if ((k % 3) == 0) {
+            if ((index % 3) == 0) {                                    // На всяка трета буква:
                 for (int l = 0; l < literal.length(); l++) {
-                    if (stb.charAt(l) != message.charAt(l)) {
-                        r++;
+                    if (stb.charAt(l) != message.charAt(l)) {          // провери ... "stb.charAt(l) ?= SOS"
+                        wordCount++;                                        // преброй различните букви
+                        words[p++] = literal;                          // Запазва сгрешените думи в масив
                     }
                 }
-                stb.delete(0, k);
+                // word[p++] = literal;                                // Запазва проверените думи в масив.
+                // System.out.print(stb + " ");
+                stb.delete(0, index);                                  // изтрий stb
                 literal = "";
             }
             j++;
         }
 
-        System.out.println(r);
+        System.out.println("Text is: " + input + "; " + "Key: " + message + ";");
+        System.out.print("Different word is: " + wordCount + " -> ");
+        for (String el : words) {
+            if (el != null) System.out.print(el + " ");
+        }
 
         /* OLD
          while (j < input.length()) {
