@@ -69,7 +69,7 @@ public class Word extends Methods {
                         System.out.print("Ok ");
                     }
                     stb.delete(1, word.length());
-                    k = k - (word.length() - 1);
+                    k = k - (word.length() - 1);              // Маха в случая двете последно добавени букви.
                 }
             }
         }
