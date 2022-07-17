@@ -12,7 +12,7 @@ public class Word extends Methods {
         // Има ли я думата "word" в низа "text1"...?
 
         String text = "alabala opa opa";
-        String text1 = "alavopadksjflsdjf";                   
+        String text1 = "alavopadksjflsdjf";
         String[] input = text.split(" ");
         String[] input1 = text.split(" ");
 
@@ -52,9 +52,9 @@ public class Word extends Methods {
 
         System.out.println(text1);
         for (int j = 0; j < text1.length(); j++) {
-            int k = 0;
+            int k = 0;                                    // ... След като "l" = text1.length() нулирай "k" и "stb"
             stb.delete(0, word.length());
-            stb.append(text1.charAt(j));
+            stb.append(text1.charAt(j));                  // ... за новата стойност на "j" запълни "stb"
             k++;
             for (int l = j + 1; l < text1.length(); l++) {
                 stb.append(text1.charAt(l));
