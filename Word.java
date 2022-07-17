@@ -55,7 +55,7 @@ public class Word extends Methods {
 
         // -------------------------------------------------------------------------------------
 
-        System.out.println(text1);
+        System.out.println("Text: " + text1 + "; ->" + " Word: " + word);
         for (int j = 0; j < text1.length(); j++) {
             int k = 0;                                    // ... След като "l" = text1.length() нулирай "k" и "stb"
             stb.delete(0, word.length());
