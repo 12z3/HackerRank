@@ -12,12 +12,13 @@ public class Word extends Methods {
         // Има ли я думата "word" в низа "text1"...?
 
         String text = "alabala opa opa";
-        String text1 = "alavopa";                   // Има значение от броя на буквите.
+        String text1 = "alavopadksjflsdjf";                   // Има значение от броя на буквите.
         String[] input = text.split(" ");
         String[] input1 = text.split(" ");
 
         String word = "opa";
         int countMatches = 0, i = 0, k = 0, countChar = 0;
+        boolean isMatch = false;
         StringBuilder stb = new StringBuilder();
 
 //        for (int i = 0; i < input.length; i++) {
@@ -57,7 +58,7 @@ public class Word extends Methods {
             k++;
             for (int l = j + 1; l < text1.length(); l++) {
                 stb.append(text1.charAt(l));
-                k++;                           //Ред 59: Дължината на създадения stb съвпада ли с дължината на думата ?
+                k++;                            //Ред 59: Дължината на създадения stb съвпада ли с дължината на думата?
                 if ((k % word.length() == 0) && l < text1.length() ) {
                     countChar = 0;
                     for (int t = 0; t < word.length(); t++) {
@@ -66,13 +67,16 @@ public class Word extends Methods {
                         }
                     }
                     if (countChar == word.length()) {
-                        System.out.print("Ok ");
+                        isMatch = true;
                     }
                     stb.delete(1, word.length());
                     k = k - (word.length() - 1);              // Маха в случая двете последно добавени букви.
                 }
             }
         }
+        if (isMatch) {
+            System.out.print("There is it ;)");
+        } else System.out.println(";(");
 
     }
 }
