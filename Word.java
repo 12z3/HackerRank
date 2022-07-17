@@ -81,7 +81,7 @@ public class Word extends Methods {
                         isMatch = true;
                     }
                     stb.delete(1, word.length());
-                    k -= (word.length() - 1);              // Маха в случая двете последно добавени букви.
+                    k -= (word.length() - 1);              // "Маха" в случая двете последно добавени букви.
                 }
             }
         }
