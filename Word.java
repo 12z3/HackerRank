@@ -12,7 +12,7 @@ public class Word extends Methods {
         // Има ли я думата "word" в низа "text1"...?
 
         String text = "alabala opa opa";
-        String text1 = "alavopadksjflsdjf";                   // Има значение от броя на буквите.
+        String text1 = "alavopadksjflsdjf";                   
         String[] input = text.split(" ");
         String[] input1 = text.split(" ");
 
@@ -50,6 +50,7 @@ public class Word extends Methods {
 //            i++;
 //        }
 
+        System.out.println(text1);
         for (int j = 0; j < text1.length(); j++) {
             int k = 0;
             stb.delete(0, word.length());
