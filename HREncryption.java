@@ -19,7 +19,8 @@ public class HREncryption extends Methods {
 
 
         // encrypting
-        String[] input = scanner.nextLine().split(" ");
+        String message = "have a nice day";
+        String[] input = message.split(" ");
         StringBuilder stb = new StringBuilder();
         StringBuilder encrypt = new StringBuilder();
 
@@ -28,7 +29,8 @@ public class HREncryption extends Methods {
                 stb.append(input[i]);
             }
         }
-        System.out.println(stb);
+        System.out.println("Message: " + stb);
+        System.out.println();
 
         double inputLength = Math.sqrt(stb.length());
         int col = (int) Math.ceil(inputLength);
@@ -39,8 +41,8 @@ public class HREncryption extends Methods {
 
         int k = 0;
         boolean isBreak = false;
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {             // За всяка колона j от i-я ред
+        for (int i = 0; i < row; i++) {                                    // ->> // [1][0]->[2][0]->[3][0]-> row.
+            for (int j = 0; j < col; j++) {                                       // [0][1]->[0][2]->[0][3]-> col.
                 if (k < stb.length()) {
                     System.out.print(stb.charAt(k) + " ");
                     result[i][j] = stb.charAt(k);
@@ -58,8 +60,8 @@ public class HREncryption extends Methods {
         for (int j = 0; j < col; j++) {                  // <- Обхожда масива колона по колона, а не ред по ред.
             if (j != 0) encrypt.append(" ");             // Т.е: За всеки ред от дадена колона....
             for (int i = 0; i < row; i++) {              // <-
-                if (result[i][j] != 0) encrypt.append(result[i][j]);
-            }
+                if (result[i][j] != 0) encrypt.append(result[i][j]);                  // [1][0]->[2][0]->[3][0]-> row.
+            }                                                                  // ->> // [0][1]->[0][2]->[0][3]-> col.
         }
         System.out.println();
         System.out.print("encrypt = " + encrypt + "\n");
