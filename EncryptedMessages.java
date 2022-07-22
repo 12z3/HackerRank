@@ -6,21 +6,20 @@ public class EncryptedMessages extends Methods {
 
     private static String encrypt(String text) {
         char[] charMassive1 = stringToCharMassive(text);
-        StringBuilder encrypted = new StringBuilder();
+        String encrypted = "";
         String encryptedAsTxt = "";
         int key = 5;
         for (char el: charMassive1) {
             el += key;
-            encrypted.append(el);
+            encrypted += el;
         }
 
         encryptedAsTxt = encrypted.toString();
         return encryptedAsTxt;
     }
 
-    private static String decrypt(String text){
+    private static String decrypt(String text, int key){
         String decrypt = "";
-        int key = 5;
         char[] charS = text.toCharArray();
         for (char el: charS) {
             el -= key;
@@ -37,7 +36,7 @@ public class EncryptedMessages extends Methods {
 
         System.out.println("Original messages: " + text);
         System.out.println("Encrypted: " + encrypt(text));
-        System.out.println("Decrypt messages: " + decrypt(encrypt(text)));
+        System.out.println("Decrypt messages: " + decrypt(encrypt(text),5));
 
     }
 }
