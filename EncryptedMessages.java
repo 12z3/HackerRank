@@ -7,15 +7,12 @@ public class EncryptedMessages extends Methods {
     private static String encrypt(String text) {
         char[] charMassive1 = stringToCharMassive(text);
         String encrypted = "";
-        String encryptedAsTxt = "";
         int key = 5;
         for (char el: charMassive1) {
             el += key;
             encrypted += el;
         }
-
-        encryptedAsTxt = encrypted.toString();
-        return encryptedAsTxt;
+        return encrypted;
     }
 
     private static String decrypt(String text, int key){
