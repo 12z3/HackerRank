@@ -5,10 +5,10 @@ import training.Methods;
 public class EncryptedMessages extends Methods {
 
     private static String encrypt(String text) {
-        char[] charMassive1 = stringToCharMassive(text);
+        char[] charMassive = text.toCharArray();
         String encrypted = "";
         int key = 5;
-        for (char el: charMassive1) {
+        for (char el: charMassive) {
             el += key;
             encrypted += el;
         }
@@ -16,8 +16,8 @@ public class EncryptedMessages extends Methods {
     }
 
     private static String decrypt(String text, int key){
-        String decrypt = "";
         char[] charS = text.toCharArray();
+        String decrypt = "";
         for (char el: charS) {
             el -= key;
             decrypt += el;
