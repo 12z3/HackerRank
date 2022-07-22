@@ -17,12 +17,12 @@ public class EncryptedMessages extends Methods {
 
     private static String decrypt(String text, int key){
         char[] charS = text.toCharArray();
-        String decrypt = "";
+        String decrypted = "";
         for (char el: charS) {
             el -= key;
-            decrypt += el;
+            decrypted += el;
         }
-        return decrypt;
+        return decrypted;
     }
     public static void main(String[] args) {
 
