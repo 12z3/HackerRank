@@ -19,7 +19,7 @@ public class HREncryption extends Methods {
 
 
         // encrypting
-        String message = "have a nice day";
+        String message = "if man was meant to stay on the ground dog would have given os roots";
         String[] input = message.split(" ");
         StringBuilder stb = new StringBuilder();
         StringBuilder encrypt = new StringBuilder();
@@ -30,7 +30,6 @@ public class HREncryption extends Methods {
             }
         }
         System.out.println("Message: " + stb);
-        System.out.println();
 
         double inputLength = Math.sqrt(stb.length());
         int col = (int) Math.ceil(inputLength);
@@ -64,30 +63,63 @@ public class HREncryption extends Methods {
             }                                                                  // ->> // [0][1]->[0][2]->[0][3]-> col.
         }
         System.out.println();
-        System.out.print("encrypt = " + encrypt + "\n");
+        System.out.print("encrypted: " + encrypt + "\n");
 
 
-        // decrypting
+        // decrypting                                                         // Оправи ГО  <-
+        decrypt(encrypt);
         int[] spceIndexes;
+        char[][] some = new char[row][col];
+
+//        for (int i = 0; i < row; i++) {
+//            for (int j = 0; j < col; j++) {
+//                if (w < encrypt.length()) {
+//                    some[i][j] = encrypt.charAt(w);
+//                    w++;
+//                } else {
+//                    isBreak = true;
+//                    break;
+//                }
+//            }
+//            if (isBreak) break;
+//        }
+//
+//        for (int i = 0; i < row; i++) {
+//            for (int j = 0; j < col; j++) {
+//                System.out.print(some[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+    }
+
+    public static void decrypt(StringBuilder encrypt) {
+        int row = 8, col = 7;                                                // Как взимаш "row" и "col" ?
+
+        char[][] some = new char[row][col];
         StringBuilder decrypt = new StringBuilder();
+        StringBuilder tmp = new StringBuilder();
+
+        for (int i = 0; i < encrypt.length(); i++) {
+            if (encrypt.charAt(i) != 32) tmp.append(encrypt.charAt(i));
+        }
+
+        int k = 0;
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
-                if (k < stb.length()) {
-                    result[i][j] = encrypt.charAt(k);
-                    k++;
-                } else {
-                    isBreak = true;
-                    break;
+                if (k < tmp.length()) {
+                    some[i][j] = tmp.charAt(k++);
+                    System.out.print(some[i][j] + " ");
                 }
             }
-            if (isBreak) break;
+            System.out.println();
         }
 
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                if (result[i][j] != 0) decrypt.append(result[i][j]);
+        for (int j = 0; j < col; j++) {
+            for (int i = 0; i < row; i++) {
+                if (some[i][j] != 0) decrypt.append(some[i][j]);
             }
         }
-        System.out.print("decrypt = " + decrypt + "\n");
+        System.out.println("decrypted: " + decrypt);
+
     }
 }
