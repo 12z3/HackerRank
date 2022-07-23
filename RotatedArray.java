@@ -6,6 +6,8 @@ public class RotatedArray extends Methods {
     public static void main(String[] args) {
 
         /**
+         * https://javarevisited.blogspot.com/2015/07/
+         how-to-rotate-array-in-java-leetcode-solution.html?utm_source=dlvr.it&utm_medium=facebook
          * Java Program to rotate array in Java
          * Problem : Rotate an integer array of n elements after kth index.
          * For example, with n = 7 and k = 3, the array [1,2,3,4,5,6,7]
@@ -18,10 +20,10 @@ public class RotatedArray extends Methods {
         int[] a = {1, 2, 3, 4, 5, 6, 7};
         int[] tmp = new int[a.length];
 
-        for (int i = k + 1, j = 0; i <a.length ; i++, j++) {
+        for (int i = k + 1, j = 0; i < a.length; i++, j++) {
             tmp[j] = a[i];
         }
-        for (int i = a.length - 1 - k, j = 0; i < a.length ; i++, j++) {
+        for (int i = a.length - 1 - k, j = 0; i < a.length; i++, j++) {
             tmp[i] = a[j];
         }
 
