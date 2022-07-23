@@ -35,7 +35,6 @@ public class RotatedArray extends Methods {
 
         int k = 3;
         int[] a = {1, 2, 3, 4, 5, 6, 7};
-        int[] tmp = new int[a.length];
 
         System.out.println(Arrays.toString(rotatedArray(a, k)));
 
