@@ -5,11 +5,12 @@ import training.Methods;
 import java.util.Arrays;
 
 public class RotatedArray extends Methods {
+
     private static int[] rotatedArray(int[] a, int k) {
         int[] tmp = new int[a.length];
         boolean isBreak = false;
 
-        if (k >= a.length) return new int[a.length];
+        if (k >= a.length || k <= - 2) return new int[a.length];
 
         for (int i = k + 1, j = 0; i < a.length; i++, j++) {
             tmp[j] = a[i];
@@ -33,7 +34,7 @@ public class RotatedArray extends Methods {
          * @author Javin Paul
          */
 
-        int k = 3;
+        int k = -2;
         int[] a = {1, 2, 3, 4, 5, 6, 7};
 
         System.out.println(Arrays.toString(rotatedArray(a, k)));
