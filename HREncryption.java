@@ -5,6 +5,7 @@ import training.Methods;
 import java.util.Scanner;
 
 public class HREncryption extends Methods {
+
     private static StringBuilder encrypt(String message) {
         String[] input = message.split(" ");
         StringBuilder encrypt = new StringBuilder();
@@ -41,12 +42,13 @@ public class HREncryption extends Methods {
             if (isBreak) break;
             System.out.println();
         }
+        System.out.println();
 
         for (int j = 0; j < col; j++) {                  // <- Обхожда масива колона по колона, а не ред по ред.
             if (j != 0) encrypt.append(" ");             // Т.е: За всеки ред от дадена колона....
             for (int i = 0; i < row; i++) {              // <-
                 if (key[i][j] != 0) encrypt.append(key[i][j]);                  // [1][0]->[2][0]->[3][0]-> row.
-            }                                                                  // ->> // [0][1]->[0][2]->[0][3]-> col.
+            }                                                                   // ->> // [0][1]->[0][2]->[0][3]-> col.
         }
 
         System.out.print("encrypted: " + encrypt + "\n");
@@ -54,7 +56,7 @@ public class HREncryption extends Methods {
     }
 
     public static StringBuilder decrypt(StringBuilder encrypt) {
-        int row = 4, col = 3;                                                // Как взимаш "row" и "col" ?
+        int row = 4, col = 3;                                                  // Как взимаш "row" и "col" ?
         System.out.printf("row = %d, col = %d\n", row, col);
 
         char[][] key = new char[row][col];
@@ -102,7 +104,6 @@ public class HREncryption extends Methods {
          */
 
         String message = "have a nice day";
-        encrypt(message);
         decrypt(encrypt(message));
 
     }
