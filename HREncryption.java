@@ -82,23 +82,30 @@ public class HREncryption extends Methods {
             }
         }
         System.out.println("decrypted: " + decrypt);
-        return  decrypt;
+        return decrypt;
     }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         timeAndData();
 
 
-        // https://www.hackerrank.com/challenges/encryption/problem?utm_campaign=challenge-recommendation&utm_
-        // medium=email&utm_source=24-hour-campaign
+        /**
+         * @autor:
+         https://www.hackerrank.com/challenges/encryption/
+         problem?utm_campaign=challenge-recommendation&utm_
+         */
 
-        // if man was meant to stay on the ground dog would have given os roots
-        // have a nice day
-        // feed the dog
+        /**
+         * @task:
+         - if man was meant to stay on the ground dog would have given os roots
+         - have a nice day
+         - feed the dog
+         */
 
         String message = "have a nice day";
         encrypt(message);
         decrypt(encrypt(message));
-        
+
     }
 }
