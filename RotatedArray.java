@@ -1,7 +1,6 @@
 package hackerRank;
 
 import training.Methods;
-
 import java.util.Arrays;
 
 public class RotatedArray extends Methods {
@@ -24,17 +23,19 @@ public class RotatedArray extends Methods {
     public static void main(String[] args) {
 
         /**
+         @sourse:
          * https://javarevisited.blogspot.com/2015/07/
          how-to-rotate-array-in-java-leetcode-solution.html?utm_source=dlvr.it&utm_medium=facebook
 
+         @task:
          * Problem : Rotate an integer array of n elements after kth index.
          * For example, with n = 7 and k = 3, the array [1,2,3,4,5,6,7]
          * is rotated to [5,6,7,1,2,3,4]
          *
-         * @author Javin Paul
+         @author Javin Paul
          */
 
-        int k = -2;
+        int k = 3;
         int[] a = {1, 2, 3, 4, 5, 6, 7};
 
         System.out.println(Arrays.toString(rotatedArray(a, k)));

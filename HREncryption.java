@@ -91,13 +91,11 @@ public class HREncryption extends Methods {
 
 
         /**
-         * @autor:
+          @sourse:
          https://www.hackerrank.com/challenges/encryption/
          problem?utm_campaign=challenge-recommendation&utm_
-         */
 
-        /**
-         * @task:
+          @task:
          - if man was meant to stay on the ground dog would have given os roots
          - have a nice day
          - feed the dog
