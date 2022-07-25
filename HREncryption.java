@@ -12,9 +12,7 @@ public class HREncryption extends Methods {
         StringBuilder stb = new StringBuilder();
 
         for (int i = 0; i < input.length; i++) {
-            if (!(input[i].equals(" "))) {
-                stb.append(input[i]);
-            }
+            if (!(input[i].equals(" "))) stb.append(input[i]);
         }
         System.out.println("Message: " + stb);
 
