@@ -78,7 +78,7 @@ public class HREncryption extends Methods {
             System.out.println();
         }
 
-        for (int j = 0; j < col; j++) {
+        for (int j = 0; j < col; j++) {                 // key[][] - остава не променен. Обхожда се по-пазличен начин.
             for (int i = 0; i < row; i++) {
                 if (key[i][j] != 0) decrypt.append(key[i][j]);
             }
