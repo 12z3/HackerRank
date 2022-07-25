@@ -25,15 +25,15 @@ public class HREncryption extends Methods {
         char[][] key = new char[row][col];
         System.out.printf("row = %d, col = %d\n", row, col);
 
-        int k = 0;
+        int index = 0;
         boolean isBreak = false;
         for (int i = 0; i < row; i++) {                                    // ->> // [1][0]->[2][0]->[3][0]-> row.
             for (int j = 0; j < col; j++) {                                       // [0][1]->[0][2]->[0][3]-> col.
-                if (k < stb.length()) {
-                    System.out.print(stb.charAt(k) + " ");
-                    key[i][j] = stb.charAt(k);
+                if (index < stb.length()) {
+                    System.out.print(stb.charAt(index) + " ");
+                    key[i][j] = stb.charAt(index);
                     //System.out.print(result[i][j] + " ");
-                    k++;
+                    index++;
                 } else {
                     isBreak = true;
                     break;
@@ -67,11 +67,11 @@ public class HREncryption extends Methods {
             if (encrypt.charAt(i) != 32) tmp.append(encrypt.charAt(i));
         }
 
-        int k = 0;
+        int index = 0;
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
-                if (k < tmp.length()) {
-                    key[i][j] = tmp.charAt(k++);
+                if (index < tmp.length()) {
+                    key[i][j] = tmp.charAt(index++);
                     System.out.print(key[i][j] + " ");
                 }
             }
