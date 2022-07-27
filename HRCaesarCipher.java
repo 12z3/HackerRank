@@ -23,8 +23,8 @@ public class HRCaesarCipher extends Methods {
         String input = "There's-a-starman-waiting-in-the-sky";
         String input1 = "abcdefghijklmnopqrstuvwxyz";
 
-        System.out.println(encryp(input, 3));
-        System.out.println(decrypt(encryp(input, 3), 3));
+        System.out.println(encrypt(input, 3));
+        System.out.println(decrypt(encrypt(input, 3), 3));
 
 
 //        char[] ch = stringToCharMassive(input);
@@ -60,7 +60,7 @@ public class HRCaesarCipher extends Methods {
 //        }
     }
 
-    private static String encryp(String input, int key) {
+    private static String encrypt(String input, int key) {
         char[] ch = input.toCharArray();
         StringBuilder stb = new StringBuilder();
         String encrypt = "";
@@ -99,7 +99,7 @@ public class HRCaesarCipher extends Methods {
             } else if (ch[i] >= 65 && ch[i] <= 90) {
                 ch[i] -= key;
                 if (ch[i] < 65) {
-                    ch[i] = (char) (ch[i] + (89 - 65));
+                    ch[i] = (char) (ch[i] + (90 - 64));
                 }
                 stb.append(ch[i]);
             } else stb.append(ch[i]);
