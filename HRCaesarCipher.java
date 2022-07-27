@@ -15,14 +15,16 @@ public class HRCaesarCipher extends Methods {
 
          Original alphabet:      abcdefghijklmnopqrstuvwxyz
          Alphabet rotated +3:    defghijklmnopqrstuvwxyzabc
-         @input: "There's-a-starman-waiting-in-the-sky"
+         @input: "There's-a-starman-waiting-in-the-sky" key = 3
          "abc-defghijklmnop'qrstuvwxyz"
          "middle-Outz" -> "okffng-Qwvb"
          */
 
         String input = "There's-a-starman-waiting-in-the-sky";
+        String input1 = "abcdefghijklmnopqrstuvwxyz";
 
         System.out.println(encryp(input,3));
+        System.out.println(decrypt(encryp(input,3),3));
 
 
 //        char[] ch = stringToCharMassive(input);
@@ -78,8 +80,30 @@ public class HRCaesarCipher extends Methods {
                 stb.append(ch[i]);
             }  else stb.append(ch[i]);
         }
-        //System.out.println(stb);
         encrypt = stb.toString();
         return encrypt;
+    }
+    private static String decrypt(String encrypt, int key) {              // Оправи го:
+        char[] ch = encrypt.toCharArray();                                //Wkhuh'v-d-vwdupdq-zdlwlqj-lq-wkh-vnb
+        StringBuilder stb = new StringBuilder();                          //There's-a-starman-waiting-in-the-sk_
+        String dencrypt = "";                                      // ->  //There's-a-starman-waiting-in-the-sky
+
+        for (int i = 0; i < ch.length; i++) {
+            if (ch[i] >= 97 && ch[i] <= 122) {
+                ch[i] -= key;
+                if (ch[i] > 122) {
+                    ch[i] = (char) (ch[i] - (122 - 96));
+                }
+                stb.append(ch[i]);
+            } else if (ch[i] >= 65 && ch[i] <= 90) {
+                ch[i] -= key;
+                if (ch[i] > 90) {
+                    ch[i] = (char) (ch[i] - (90 - 64));
+                }
+                stb.append(ch[i]);
+            }  else stb.append(ch[i]);
+        }
+        dencrypt = stb.toString();
+        return dencrypt;
     }
 }
