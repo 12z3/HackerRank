@@ -58,20 +58,20 @@ public class HRCaesarCipher extends Methods {
 //        }
     }
 
-    private static String encryp(String input, int k) {
+    private static String encryp(String input, int key) {
         char[] ch = input.toCharArray();
         StringBuilder stb = new StringBuilder();
         String encrypt = "";
 
         for (int i = 0; i < ch.length; i++) {
             if (ch[i] >= 97 && ch[i] <= 122) {
-                ch[i] += k;
+                ch[i] += key;
                 if (ch[i] > 122) {
                     ch[i] = (char) (ch[i] - (122 - 96));
                 }
                 stb.append(ch[i]);
             } else if (ch[i] >= 65 && ch[i] <= 90) {
-                ch[i] += k;
+                ch[i] += key;
                 if (ch[i] > 90) {
                     ch[i] = (char) (ch[i] - (90 - 64));
                 }
