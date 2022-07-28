@@ -5,6 +5,55 @@ import training.Methods;
 import java.util.Scanner;
 
 public class HRCaesarCipher extends Methods {
+
+    private static String encrypt(String input, int key) {
+        char[] ch = input.toCharArray();
+        StringBuilder stb = new StringBuilder();
+        String encrypt = "";
+
+        for (int i = 0; i < ch.length; i++) {
+            if (ch[i] >= 97 && ch[i] <= 122) {                  // Ако ch[i] = a и е между 'а' и 'z' то:
+                ch[i] += key;                                   // - модифицирай a -> d
+                if (ch[i] > 122) {                              // Ако ch[i] = z то:
+                    ch[i] = (char) (ch[i] - (122 - 96));        // - модифицирай z -> c
+                }
+                stb.append(ch[i]);                              // Добави ch[i] към "stb"
+            } else if (ch[i] >= 65 && ch[i] <= 90) {
+                ch[i] += key;
+                if (ch[i] > 90) {
+                    ch[i] = (char) (ch[i] - (90 - 64));
+                }
+                stb.append(ch[i]);
+            } else stb.append(ch[i]);           // Ако ch[i] не съвпада с никоя от буквите от 'a' до 'z' и от 'A' до 'Z'
+        }                                       // - то добави я към "stb"
+        encrypt = stb.toString();
+        return encrypt;
+    }
+
+    private static String decrypt(String encrypt, int key) {
+        char[] ch = encrypt.toCharArray();
+        StringBuilder stb = new StringBuilder();
+        String dencrypt = "";
+
+        for (int i = 0; i < ch.length; i++) {
+            if (ch[i] >= 97 && ch[i] <= 122) {
+                ch[i] -= key;
+                if (ch[i] < 97) {
+                    ch[i] = (char) (ch[i] + (122 - 96));
+                }
+                stb.append(ch[i]);
+            } else if (ch[i] >= 65 && ch[i] <= 90) {
+                ch[i] -= key;
+                if (ch[i] < 65) {
+                    ch[i] = (char) (ch[i] + (90 - 64));
+                }
+                stb.append(ch[i]);
+            } else stb.append(ch[i]);
+        }
+        dencrypt = stb.toString();
+        return dencrypt;
+    }
+    
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         timeAndData();
@@ -59,53 +108,5 @@ public class HRCaesarCipher extends Methods {
 //                } else continue;
 //            }
 //        }
-    }
-
-    private static String encrypt(String input, int key) {
-        char[] ch = input.toCharArray();
-        StringBuilder stb = new StringBuilder();
-        String encrypt = "";
-
-        for (int i = 0; i < ch.length; i++) {
-            if (ch[i] >= 97 && ch[i] <= 122) {                  // Ако ch[i] = a и е между 'а' и 'z' то:
-                ch[i] += key;                                   // - модифицирай a -> d
-                if (ch[i] > 122) {                              // Ако ch[i] = z то:
-                    ch[i] = (char) (ch[i] - (122 - 96));        // - модифицирай z -> c
-                }
-                stb.append(ch[i]);
-            } else if (ch[i] >= 65 && ch[i] <= 90) {
-                ch[i] += key;
-                if (ch[i] > 90) {
-                    ch[i] = (char) (ch[i] - (90 - 64));
-                }
-                stb.append(ch[i]);
-            } else stb.append(ch[i]);           // Ако ch[i] не съвпада с никоя от буквите от 'a' до 'z' и от 'A' до 'Z'
-        }                                       // - то добави я към "stb"
-        encrypt = stb.toString();
-        return encrypt;
-    }
-
-    private static String decrypt(String encrypt, int key) {
-        char[] ch = encrypt.toCharArray();
-        StringBuilder stb = new StringBuilder();
-        String dencrypt = "";
-
-        for (int i = 0; i < ch.length; i++) {
-            if (ch[i] >= 97 && ch[i] <= 122) {
-                ch[i] -= key;
-                if (ch[i] < 97) {
-                    ch[i] = (char) (ch[i] + (122 - 96));
-                }
-                stb.append(ch[i]);
-            } else if (ch[i] >= 65 && ch[i] <= 90) {
-                ch[i] -= key;
-                if (ch[i] < 65) {
-                    ch[i] = (char) (ch[i] + (90 - 64));
-                }
-                stb.append(ch[i]);
-            } else stb.append(ch[i]);
-        }
-        dencrypt = stb.toString();
-        return dencrypt;
     }
 }
