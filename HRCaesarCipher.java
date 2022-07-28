@@ -79,9 +79,9 @@ public class HRCaesarCipher extends Methods {
                     ch[i] = (char) (ch[i] - (90 - 64));
                 }
                 stb.append(ch[i]);
-            } else stb.append(ch[i]);
-        }                                       // Ако ch[i] не съвпада с никоя от буквите от 'a' до 'z' и от 'A' до 'Z'
-        encrypt = stb.toString();               // - то добави я към "stb"
+            } else stb.append(ch[i]);           // Ако ch[i] не съвпада с никоя от буквите от 'a' до 'z' и от 'A' до 'Z'
+        }                                       // - то добави я към "stb"
+        encrypt = stb.toString();
         return encrypt;
     }
 
