@@ -71,8 +71,8 @@ public class HRCaesarCipher extends Methods {
                 ch[i] += key;                                   // - модифицирай a -> d
                 if (ch[i] > 122) {                              // Ако ch[i] = z то:
                     ch[i] = (char) (ch[i] - (122 - 96));        // - модифицирай z -> c
-                }                                               // Ако ch[i] не съвпада с никоя от буквите от 'a' до 'z'
-                stb.append(ch[i]);                              // - то добавия към "stb"
+                }
+                stb.append(ch[i]);
             } else if (ch[i] >= 65 && ch[i] <= 90) {
                 ch[i] += key;
                 if (ch[i] > 90) {
@@ -80,8 +80,8 @@ public class HRCaesarCipher extends Methods {
                 }
                 stb.append(ch[i]);
             } else stb.append(ch[i]);
-        }
-        encrypt = stb.toString();
+        }                                       // Ако ch[i] не съвпада с никоя от буквите от 'a' до 'z' и от 'A' до 'Z'
+        encrypt = stb.toString();               // - то добави я към "stb"
         return encrypt;
     }
 
