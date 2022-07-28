@@ -10,6 +10,7 @@ public class HRCaesarCipher extends Methods {
         char[] ch = input.toCharArray();
         StringBuilder stb = new StringBuilder();
         String encrypt = "";
+        key %= 26;                                             // Без това Тестовете не минават.
 
         for (int i = 0; i < ch.length; i++) {
             if (ch[i] >= 97 && ch[i] <= 122) {                  // Ако ch[i] = a и е между 'а' и 'z' то:
@@ -34,6 +35,7 @@ public class HRCaesarCipher extends Methods {
         char[] ch = encrypt.toCharArray();
         StringBuilder stb = new StringBuilder();
         String dencrypt = "";
+        key %= 26;
 
         for (int i = 0; i < ch.length; i++) {
             if (ch[i] >= 97 && ch[i] <= 122) {
@@ -53,7 +55,7 @@ public class HRCaesarCipher extends Methods {
         dencrypt = stb.toString();
         return dencrypt;
     }
-    
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         timeAndData();
