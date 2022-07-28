@@ -15,13 +15,14 @@ public class HRCaesarCipher extends Methods {
 
          Original alphabet:      abcdefghijklmnopqrstuvwxyz
          Alphabet rotated +3:    defghijklmnopqrstuvwxyzabc
-         @input: "There's-a-starman-waiting-in-the-sky" key = 3
+         @input: "There's-a-starman-waiting-in-the-sky" key = 3 -> Wkhuh'v-d-vwdupdq-zdlwlqj-lq-wkh-vnb
          "abc-defghijklmnop'qrstuvwxyz"
          "middle-Outz" -> "okffng-Qwvb"
          */
 
-        String input = "There's-a-starman-waiting-in-the-sky";
-        String input1 = "abcdefghijklmnopqrstuvwxyz";
+        String input1 = "There's-a-starman-waiting-in-the-sky";
+        String input2 = "abcdefghijklmnopqrstuvwxyz";
+        String input = "ab'uv-wxy-z";
 
         System.out.println(encrypt(input, 3));
         System.out.println(decrypt(encrypt(input, 3), 3));
@@ -85,8 +86,8 @@ public class HRCaesarCipher extends Methods {
     }
 
     private static String decrypt(String encrypt, int key) {
-        char[] ch = encrypt.toCharArray();                                //Wkhuh'v-d-vwdupdq-zdlwlqj-lq-wkh-vnb
-        StringBuilder stb = new StringBuilder();                          //There's-a-starman-waiting-in-the-sky
+        char[] ch = encrypt.toCharArray();
+        StringBuilder stb = new StringBuilder();
         String dencrypt = "";
 
         for (int i = 0; i < ch.length; i++) {
