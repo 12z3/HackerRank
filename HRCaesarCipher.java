@@ -24,8 +24,8 @@ public class HRCaesarCipher extends Methods {
         String input2 = "abcdefghijklmnopqrstuvwxyz";
         String input = "ab'uv-wxy-z";
 
-        System.out.println(encrypt(input, 3));
-        System.out.println(decrypt(encrypt(input, 3), 3));
+        System.out.println("encrypted: " + encrypt(input, 3));
+        System.out.println("decrypted: " + decrypt(encrypt(input, 3), 3));
 
 
 //        char[] ch = stringToCharMassive(input);
