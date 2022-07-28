@@ -20,9 +20,9 @@ public class HRCaesarCipher extends Methods {
          "middle-Outz" -> "okffng-Qwvb"
          */
 
-        String input1 = "There's-a-starman-waiting-in-the-sky";
+        String input = "There's-a-starman-waiting-in-the-sky";
         String input2 = "abcdefghijklmnopqrstuvwxyz";
-        String input = "ab'uv-wxy-z";
+        String input3 = "ab'uv-wxy-z";
 
         System.out.println("encrypted: " + encrypt(input, 3));
         System.out.println("decrypted: " + decrypt(encrypt(input, 3), 3));
@@ -67,12 +67,12 @@ public class HRCaesarCipher extends Methods {
         String encrypt = "";
 
         for (int i = 0; i < ch.length; i++) {
-            if (ch[i] >= 97 && ch[i] <= 122) {
-                ch[i] += key;
-                if (ch[i] > 122) {
-                    ch[i] = (char) (ch[i] - (122 - 96));
-                }
-                stb.append(ch[i]);
+            if (ch[i] >= 97 && ch[i] <= 122) {                  // Ако ch[i] = a и е между 'а' и 'z' то:
+                ch[i] += key;                                   // - модифицирай a -> d
+                if (ch[i] > 122) {                              // Ако ch[i] = z то:
+                    ch[i] = (char) (ch[i] - (122 - 96));        // - модифицирай z -> c
+                }                                               // Ако ch[i] не съвпада с никоя от буквите от 'a' до 'z'
+                stb.append(ch[i]);                              // - то добавия към "stb"
             } else if (ch[i] >= 65 && ch[i] <= 90) {
                 ch[i] += key;
                 if (ch[i] > 90) {
