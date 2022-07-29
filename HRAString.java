@@ -2,7 +2,10 @@ package hackerRank;
 
 public class HRAString {
     public static void main(String[] args) {
-        String input = "hereiamstackerrank"; // индексите не са в правилната последователност.
+        String input3 = "hhaacckkekraraannk";
+        String input1 = "hhaacckkekrararannk";                           // Ако махнеш 2-то 'r' резултата трябва да е NO.
+        String input = "hereiamstackerrank";
+        String input2 = "rhbaasdndfsdskgbfefdbrsdfhuyatrjtcrtyytktjjt"; //Индексите не са в правилната последователност.
         System.out.println(aString(input));
 
 //        for (int el: indexes) {
@@ -27,15 +30,13 @@ public class HRAString {
         boolean isMatch = false;
 
 
-        for (int i = 0, p = 0; i < text.length(); i++, p++) {
-            for (int j = i, l = 0; j < input.length(); j++, l++) {
-
-                    if (text.charAt(i) == input.charAt(j)) {
-                        indexes[i] = j;                        // На коя позиция в "input" се намира всеки чар от "text"
-                        chars[i] = input.charAt(j);
-                        tmp[i] = text.charAt(i);
-                        break;
-
+        for (int i = 0, p = - 1; i < text.length(); i++, p++) {
+            for (int j = i + 1, l = 0; j < input.length(); j++, l++) {
+                if (text.charAt(i) == input.charAt(j) || (i == 0) ) {
+                    indexes[i] = j;
+                    chars[i] = input.charAt(j);
+                    stbB.append(chars[i]);
+                    break;
                 }
             }
         }
@@ -53,5 +54,11 @@ public class HRAString {
         if (stbA.toString().equals(stbB.toString())) {
             return "YES";
         } else return "NO";
+
+
+//        tmp[i] = text.charAt(i);
+//            if (i != 0) {
+//                if (tmp[p] == tmp[i]) continue;
+//            }
     }
 }
