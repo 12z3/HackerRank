@@ -2,10 +2,10 @@ package hackerRank;
 
 public class HRAString {
     public static void main(String[] args) {
-        String input3 = "hhaacckkekraraannk";
+        String input = "hhaacckkekraraannk";
         String input1 = "hhaacckkekrararannk";                           // Ако махнеш 2-то 'r' резултата трябва да е NO.
-        String input = "hereiamstackerrank";
-        String input2 = "rhbaasdndfsdskgbfefdbrsdfhuyatrjtcrtyytktjjt"; //Индексите не са в правилната последователност.
+        String input2 = "hereiamstackerrank";
+        String input3 = "rhbaasdndfsdskgbfefdbrsdfhuyatrjtcrtyytktjjt"; //Индексите не са в правилната последователност.
         System.out.println(aString(input));
 
 //        for (int el: indexes) {
@@ -31,8 +31,8 @@ public class HRAString {
 
 
         for (int i = 0, p = - 1; i < text.length(); i++, p++) {
-            for (int j = i + 1, l = 0; j < input.length(); j++, l++) {
-                if (text.charAt(i) == input.charAt(j) || (i == 0) ) {
+            for (int j = i, l = 0; j < input.length(); j++, l++) {
+                if (text.charAt(i) == input.charAt(j)) {
                     indexes[i] = j;
                     chars[i] = input.charAt(j);
                     stbB.append(chars[i]);
