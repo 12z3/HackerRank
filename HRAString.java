@@ -20,19 +20,19 @@ public class HRAString {
     }
 
     private static String aString(String input) {
-        String text = "hackerrank";
-        int[] indexes = new int[text.length()];
+        String word = "hackerrank";
+        int[] indexes = new int[word.length()];
         char[] chars = new char[input.length()];
         char[] tmp = new char[indexes.length];
 
-        StringBuilder stbA = new StringBuilder(text);
+        StringBuilder stbA = new StringBuilder(word);
         StringBuilder stbB = new StringBuilder();
         boolean isMatch = false;
 
 
-        for (int i = 0, p = - 1; i < text.length(); i++, p++) {
+        for (int i = 0, p = - 1; i < word.length(); i++, p++) {
             for (int j = i, l = 0; j < input.length(); j++, l++) {
-                if (text.charAt(i) == input.charAt(j)) {
+                if (word.charAt(i) == input.charAt(j)) {
                     indexes[i] = j;
                     chars[i] = input.charAt(j);
                     stbB.append(chars[i]);
