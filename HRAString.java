@@ -2,21 +2,10 @@ package hackerRank;
 
 public class HRAString {
     public static void main(String[] args) {
-        String input = "hhaacckkekraraannk";
-        String input1 = "hhaacckkekrararannk";                           // Ако махнеш 2-то 'r' резултата трябва да е NO.
-        String input2 = "hereiamstackerrank";
-        String input3 = "rhbaasdndfsdskgbfefdbrsdfhuyatrjtcrtyytktjjt"; //Индексите не са в правилната последователност.
+        String input2 = "hhaacckkekrararannk";                         // Ако махнеш 2-то 'r' резултата трябва да е NO.
+        String input3 = "hereiamstackerrank";
+        String input = "rhbaasdndfsdskgbfefdbrsdfhuyatrjtcrtyytktjjt"; //Индексите не са в правилната последователност.
         System.out.println(aString(input));
-
-//        for (int el: indexes) {
-//            if (el != 0) System.out.print(el + " ");
-//        }
-//        System.out.println();
-//        for (char el: chars){
-//            if (el != 0) System.out.print(el + " ");
-//        }
-//        System.out.println();
-//        System.out.println(stbB);
     }
 
     private static String aString(String input) {
@@ -61,4 +50,5 @@ public class HRAString {
 //                if (tmp[p] == tmp[i]) continue;
 //            }
     }
+
 }
