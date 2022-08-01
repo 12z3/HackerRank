@@ -19,7 +19,7 @@ public class HRAString {
         boolean isMatch = false;
 
 
-        for (int i = 0, p = - 1; i < word.length(); i++, p++) {
+        for (int i = 0, p = - 1; i < word.length(); i++, p++) {         // Търси "i" в "j"
             for (int j = i, l = 0; j < input.length(); j++, l++) {
                 if (word.charAt(i) == input.charAt(j)) {
                     indexes[i] = j;
