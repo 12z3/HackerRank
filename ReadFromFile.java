@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class ReadFromFile extends Methods {
 
     public static void openFile() throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("1.txt"));
+        Scanner scanner = new Scanner(new File("hackerRank/1.txt"));
     }
 
     public static void readFile(){
@@ -35,7 +35,12 @@ public class ReadFromFile extends Methods {
         }
     }
     public static void main(String[] args) throws FileNotFoundException {
-        openFile();
+
+        /**
+         @Source: https://www.youtube.com/watch?v=D98i_uxTLh4&list=PLEvI1OiL1F3ctezdKwvJnQK2f_H8U0HqK&index=11
+         */
+
+        // openFile();
         readFile();
         out();
     }
