@@ -79,6 +79,8 @@ public class HRCaesarCipher extends Methods {
         System.out.println("decrypted: " + decrypt(encrypt(input, 3), 3));
 
 
+        /** @issue: Друг Поглед върху нещата: Но, не работи добре....*/
+
 //        char[] ch = stringToCharMassive(input);
 //        char[] tmp = new char[ch.length];
 //        for (int i = k, j = 0; i < ch.length; i++, j++) {
