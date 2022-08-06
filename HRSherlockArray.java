@@ -29,6 +29,12 @@ public class HRSherlockArray extends Methods {
         System.out.println(  sherlock(input));
     }
 
+    /**
+       @Idea: Динамично разделя входният масив на две части и търси сумата от елементите им.
+     * @param input
+     * @return
+     */
+
     private static String sherlock(int[] input) {
         int sumL =0, sumR = 0;
         int[] right, left;
