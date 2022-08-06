@@ -9,6 +9,8 @@ public class HRSherlockArrayNew extends Methods {
 
         /**
          @source: https://www.hackerrank.com/challenges/sherlock-and-array/problem
+         @web: https://www.youtube.com/watch?v=xPHJH8RL3mo
+         @discusions: https://www.hackerrank.com/challenges/sherlock-and-array/forum
          @Problem: Watson gives Sherlock an array of integers. His challenge is
          to find an element of the array such that the sum of all elements
          to the left is equal to the sum of all elements to the right.
@@ -213,5 +215,21 @@ public class HRSherlockArrayNew extends Methods {
 //                System.out.printf("%d = %d", sumL, sumR);
 //            }
 //        }
+//    }
+
+//    static String balancedSums(List<Integer> arr) {
+//        int sum = 0;
+//        int left = 0;
+//        for(int su : arr){
+//            sum += su;
+//        }
+//        for(int fu : arr){
+//            if(2*left == sum - fu){
+//                return "YES";
+//            }else{
+//                left += fu;
+//            }
+//        }
+//        return "NO";
 //    }
 }
