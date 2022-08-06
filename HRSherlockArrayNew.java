@@ -25,14 +25,11 @@ public class HRSherlockArrayNew extends Methods {
         int[] input3 = {1, 3, 3, 3};
         int[] input = {1, 2, 3};
 
-        int[] left = new int[input.length], right = new int[input.length];
-        int sumL = 0, sumR = 0, sum = 0;
-
         System.out.println(sherlock(input));
     }
 
     /**
-     * @param int[] input
+     * @param  input
      * @return String: "YES" or "NO".
      * @Idea: Динамично разделя входният масив на две части и търси сумата от елементите им.
      * @Issue: На всяка итерация се съдават по два Нови масива.
