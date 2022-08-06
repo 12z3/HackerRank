@@ -56,8 +56,8 @@ public class HRSherlockArrayNew extends Methods {
                     sumL += input[j];
                 }
                 if (sumL == sumR) {
-                    return "Yes";
-                } else return "No";
+                    return "Yes";                          // Ако е изпълнено условието връща резултат и приключва...
+                } else return "No";                        // ... редовете от и след Ред: 61 не се изпълняват.
             } else {                                             // .. за всички останали "вътрешни" числа
                 sumL = sumR = 0;                                 //  int[] input = {5, 6, 8, 11};
                 left = new int[i];                 // Размера на лявата и дясната част се определя от стойността на "i".
