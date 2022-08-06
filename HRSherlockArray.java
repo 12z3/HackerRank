@@ -42,14 +42,14 @@ public class HRSherlockArray extends Methods {
 
         for (int i = 0; i < input.length; i++) {
             sumL = sumR = 0;
-            left = new int[i];
-            for (int j = 0; j < i; j++) {
+            left = new int[i];                     // Размера на лявата и дясната част се определя от стойността на "i".
+            for (int j = 0; j < i; j++) {                                  // В случая на i = 2 -> [1,3]
                 left[j] = input[j];
                 sumL += left[j];
             }
             right = new int[input.length - i - 1];
             for (int j = 0; j < input.length - i - 1; j++) {
-                right[j] = input[j + i + 1];
+                right[j] = input[j + i + 1];                               // В случая на i = 2 -> [5,6,7]
                 sumR += right[j];
             }
             if (sumL == sumR) {
