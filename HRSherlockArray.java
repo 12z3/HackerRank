@@ -41,7 +41,7 @@ public class HRSherlockArray extends Methods {
         boolean isMatch = false;
 
         for (int i = 0; i < input.length; i++) {
-            sumL = sumR = 0;
+            sumL = sumR = 0;                                               //  int[] input = {5, 6, 8, 11};
             left = new int[i];                     // Размера на лявата и дясната част се определя от стойността на "i".
             for (int j = 0; j < i; j++) {                                  // В случая на i = 2 -> [1,3]
                 left[j] = input[j];
