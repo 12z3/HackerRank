@@ -80,6 +80,58 @@ public class HRSherlockArrayNew extends Methods {
         else return "No";
     }
 
+    // Официалният вариант:
+//    public static String balancedSums(List<Integer> arr) {
+//        // Write your code here
+//        int sumL = 0, sumR = 0;
+//        int[] right, left;
+//        boolean isMatch = false;
+//
+//        for (int i = 0; i < arr.size(); i++) {
+//            sumL = sumR = 0;
+//            if (i == 0){
+//                sumL = 0;
+//                for (int j = 1; j < arr.size(); j++) {
+//                    sumR += arr.get(j);
+//                }
+//                if (sumL == sumR) {
+//                    return "YES";
+//                } else continue;
+//            } else if (i == arr.size() - 1){
+//                sumR = 0;
+//                for (int j = arr.size() - 2; j >= 0 ; j--) {
+//                    sumL += arr.get(j);
+//                }
+//                if (sumL == sumR) {
+//                    return "YES";
+//                } else return "NO";
+//            }else {
+//                sumL = sumR = 0;
+//                left = new int[i];
+//                for (int j = 0; j < i; j++) {
+//                    left[j] = arr.get(j);
+//                    sumL += left[j];
+//                }
+//                right = new int[arr.size() - i - 1];
+//                for (int j = 0; j < arr.size() - i - 1; j++) {
+//                    right[j] = arr.get(j + i + 1);
+//                    sumR += right[j];
+//                }
+//                if (sumL == sumR) {
+//                    isMatch = true;
+//                    break;
+//                }
+//            }
+//        }
+//        if (isMatch) {
+//            return "YES";
+//        }
+//        else {
+//            return "NO";
+//        }
+//    }
+//
+
 //    public static String balancedSums(List<Integer> arr) {
 //        // Write your code here
 //        int sumL = 0, sumR = 0;
