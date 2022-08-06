@@ -8,9 +8,9 @@ public class HRSherlockArrayNew extends Methods {
     public static void main(String[] args) throws FileNotFoundException {
 
         /**
-         @source: https://www.hackerrank.com/challenges/sherlock-and-array/problem
-         @web: https://www.youtube.com/watch?v=xPHJH8RL3mo
-         @discussions: https://www.hackerrank.com/challenges/sherlock-and-array/forum
+         @Source: https://www.hackerrank.com/challenges/sherlock-and-array/problem
+         @Web: https://www.youtube.com/watch?v=xPHJH8RL3mo
+         @Discussions: https://www.hackerrank.com/challenges/sherlock-and-array/forum
          @Problem: Watson gives Sherlock an array of integers. His challenge is
          to find an element of the array such that the sum of all elements
          to the left is equal to the sum of all elements to the right.
