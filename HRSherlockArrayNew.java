@@ -44,7 +44,7 @@ public class HRSherlockArrayNew extends Methods {
             if (i == 0) {                                       // Ако "i" = 0 -> Първи граничен случай
                 sumL = input[i];                                // sumL = 1;
                 for (int j = 1; j < input.length; j++) {
-                    sumR += input[j];                           // sumR = 3+4=5+6+7
+                    sumR += input[j];                           // sumR = 3+4+5+6+7
                 }
                 if (sumL == sumR) {
                     return "Yes";
