@@ -1,7 +1,6 @@
 package hackerRank;
 
 import training.Methods;
-
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
@@ -41,25 +40,25 @@ public class HRSherlockArrayNew extends Methods {
         boolean isMatch = false;
 
         for (int i = 0; i < input.length; i++) {
-            sumL = sumR = 0;
+            sumL = sumR = 0;                                    //  int[] input = {1, 3, 4, 5, 6, 7};
             if (i == 0) {                                       // Ако "i" = 0 -> Първи граничен случай
-                sumL = input[i];
+                sumL = input[i];                                // sumL = 1;
                 for (int j = 1; j < input.length; j++) {
-                    sumR += input[j];
+                    sumR += input[j];                           // sumR = 3+4=5+6+7
                 }
                 if (sumL == sumR) {
                     return "Yes";
                 } else continue;
             } else if (i == input.length - 1) {                  // Ако "i" = последното число -> Втори граничен случай
-                sumR = input[input.length - 1];
+                sumR = input[input.length - 1];                  // sumR = 7
                 for (int j = input.length - 2; j >= 0; j--) {
-                    sumL += input[j];
+                    sumL += input[j];                            // sumL = 1+3+4+5+6;
                 }
                 if (sumL == sumR) {
                     return "Yes";                          // Ако е изпълнено условието връща резултат и приключва...
                 } else return "No";                        // ... редовете от и след Ред: 61 не се изпълняват.
             } else {                                             // .. за всички останали "вътрешни" числа
-                sumL = sumR = 0;                                 //  int[] input = {5, 6, 8, 11};
+                sumL = sumR = 0;                                 //  int[] input = {1, 3, 4, 5, 6, 7};
                 left = new int[i];                 // Размера на лявата и дясната част се определя от стойността на "i".
                 for (int j = 0; j < i; j++) {                    // В случая на i = 2 -> Лява част: -> [1,3]
                     left[j] = input[j];
