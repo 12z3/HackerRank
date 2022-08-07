@@ -26,6 +26,7 @@ public class HRSherlockArrayNew extends Methods {
         int[] input1 = {1, 2, 3};
 
         System.out.println(sherlock(input));
+        System.out.println(balancedSums(input));
     }
 
     /**
@@ -78,6 +79,22 @@ public class HRSherlockArrayNew extends Methods {
         }
         if (isMatch) return "Yes";
         else return "No";
+    }
+
+    static String balancedSums(int[] arr) {
+        int sum = 0; int left = 0;
+
+        for(int su : arr){
+            sum += su;
+        }
+        for(int fu : arr){
+            if(2 * left == sum - fu){
+                return "YES";
+            }else{
+                left += fu;
+            }
+        }
+        return "NO";
     }
 
     // Официалният вариант:
@@ -214,21 +231,5 @@ public class HRSherlockArrayNew extends Methods {
 //                System.out.printf("%d = %d", sumL, sumR);
 //            }
 //        }
-//    }
-
-//    static String balancedSums(List<Integer> arr) {
-//        int sum = 0;
-//        int left = 0;
-//        for(int su : arr){
-//            sum += su;
-//        }
-//        for(int fu : arr){
-//            if(2*left == sum - fu){
-//                return "YES";
-//            }else{
-//                left += fu;
-//            }
-//        }
-//        return "NO";
 //    }
 }
