@@ -49,7 +49,7 @@ public class HRSherlockArrayNew extends Methods {
                     sumR += input[j];                           // sumR = 3+4+5+6+7
                 }
                 if (sumL == sumR) {
-                    return "Yes";
+                    return "YES";
                 } else continue;
             } else if (i == input.length - 1) {                  // Ако "i" = последното число -> Втори граничен случай
                 sumR = input[input.length - 1];                  // sumR = 7
@@ -57,8 +57,8 @@ public class HRSherlockArrayNew extends Methods {
                     sumL += input[j];                            // sumL = 1+3+4+5+6;
                 }
                 if (sumL == sumR) {
-                    return "Yes";                          // Ако е изпълнено условието връща резултат и приключва...
-                } else return "No";                        // ... редовете от и след Ред: 61 не се изпълняват.
+                    return "YES";                          // Ако е изпълнено условието връща резултат и приключва...
+                } else return "NO";                        // ... редовете от и след Ред: 61 не се изпълняват.
             } else {                                             // .. за всички останали "вътрешни" числа
                 sumL = sumR = 0;                                 //  int[] input = {1, 3, 4, 5, 6, 7};
                 left = new int[i];                 // Размера на лявата и дясната част се определя от стойността на "i".
@@ -77,8 +77,8 @@ public class HRSherlockArrayNew extends Methods {
                 }
             }
         }
-        if (isMatch) return "Yes";
-        else return "No";
+        if (isMatch) return "YES";
+        else return "NO";
     }
 
     static String balancedSums(int[] arr) {
