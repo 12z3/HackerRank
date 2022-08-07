@@ -33,7 +33,7 @@ public class HRSherlockArrayNew extends Methods {
      * @param  input
      * @return String: "YES" or "NO".
      * @Idea: Динамично разделя входният масив на две части и търси сумата от елементите им.
-     * @Issue: На всяка итерация се съдават по два Нови масива.
+     * @Issue: На всяка итерация се създават по два Нови масива.
      */
 
     private static String sherlock(int[] input) {
