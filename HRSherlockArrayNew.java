@@ -77,11 +77,13 @@ public class HRSherlockArrayNew extends Methods {
                 }
             }
         }
-        if (isMatch) return "YES";
+        if (isMatch) {
+            return "YES";
+        }
         else return "NO";
     }
 
-    static String balancedSums(int[] arr) {
+    static String balancedSums(int[] arr) {                    // int[] input = {1, 3, 4, 5, 6, 7};
         int sum = 0; int left = 0;
 
         for(int su : arr){
