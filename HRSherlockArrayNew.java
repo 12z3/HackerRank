@@ -1,8 +1,8 @@
 package hackerRank;
 
 import training.Methods;
+
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 
 public class HRSherlockArrayNew extends Methods {
     public static void main(String[] args) throws FileNotFoundException {
@@ -19,12 +19,11 @@ public class HRSherlockArrayNew extends Methods {
          an element that meets the criterion. If there is, return YES. Otherwise, return NO.
          */
 
-        ArrayList<Integer> arl = new ArrayList<>();
-        int[] input1 = {1, 3, 4, 5, 6, 7};
+        int[] input = {1, 3, 4, 5, 6, 7};
         int[] input5 = {5, 6, 8, 11};
         int[] input4 = {2, 0, 0, 0};
         int[] input3 = {1, 3, 3, 3};
-        int[] input = {1, 2, 3};
+        int[] input1 = {1, 2, 3};
 
         System.out.println(sherlock(input));
     }
