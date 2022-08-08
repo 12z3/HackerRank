@@ -83,13 +83,13 @@ public class HRSherlockArrayNew extends Methods {
         else return "NO";
     }
 
-    static String sherlockSum(int[] arr) {                    // int[] arr = {1, 3, 4, 5, 6, 7};
+    static String sherlockSum(int[] input) {                    // int[] arr = {1, 3, 4, 5, 6, 7};
         int sum = 0; int sumL = 0;
 
-        for(int allDigit : arr){
+        for(int allDigit : input){
             sum += allDigit;
         }
-        for(int digit : arr){
+        for(int digit : input){
             if(2 * sumL == sum - digit){
                 return "YES";
             }else{
