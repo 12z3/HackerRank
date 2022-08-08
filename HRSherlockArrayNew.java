@@ -86,14 +86,14 @@ public class HRSherlockArrayNew extends Methods {
     static String balancedSums(int[] arr) {                    // int[] arr = {1, 3, 4, 5, 6, 7};
         int sum = 0; int sumL = 0;
 
-        for(int digit : arr){
-            sum += digit;
+        for(int allDigit : arr){
+            sum += allDigit;
         }
-        for(int sumR : arr){
-            if(2 * sumL == sum - sumR){
+        for(int digit : arr){
+            if(2 * sumL == sum - digit){
                 return "YES";
             }else{
-                sumL += sumR;                                   // Добавя числата от дясно в ляво
+                sumL += digit;                                   // Добавя числата от дясно в ляво
             }                                                   // ... и ги сумира ако не е изпълнено равенството
         }
         return "NO";
