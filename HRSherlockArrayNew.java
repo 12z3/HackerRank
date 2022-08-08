@@ -83,7 +83,7 @@ public class HRSherlockArrayNew extends Methods {
         else return "NO";
     }
 
-    static String balancedSums(int[] arr) {                    // int[] input = {1, 3, 4, 5, 6, 7};
+    static String balancedSums(int[] arr) {                    // int[] arr = {1, 3, 4, 5, 6, 7};
         int sum = 0; int sumL = 0;
 
         for(int digit : arr){
