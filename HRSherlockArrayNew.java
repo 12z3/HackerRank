@@ -93,7 +93,7 @@ public class HRSherlockArrayNew extends Methods {
             if(2 * sumL == sum - digit){
                 return "YES";
             }else{
-                sumL += digit;                                   // Добавя числата от дясно в ляво
+                sumL += digit;                                  // Добавя числата от дясно в ляво
             }                                                   // ... и ги сумира ако не е изпълнено равенството
         }
         return "NO";
