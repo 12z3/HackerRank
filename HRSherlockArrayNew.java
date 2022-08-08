@@ -26,7 +26,7 @@ public class HRSherlockArrayNew extends Methods {
         int[] input1 = {1, 2, 3};
 
         System.out.println(sherlock(input));
-        System.out.println(balancedSums(input));
+        System.out.println(sherlockSum(input));
     }
 
     /**
@@ -83,7 +83,7 @@ public class HRSherlockArrayNew extends Methods {
         else return "NO";
     }
 
-    static String balancedSums(int[] arr) {                    // int[] arr = {1, 3, 4, 5, 6, 7};
+    static String sherlockSum(int[] arr) {                    // int[] arr = {1, 3, 4, 5, 6, 7};
         int sum = 0; int sumL = 0;
 
         for(int allDigit : arr){
