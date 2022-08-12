@@ -9,11 +9,13 @@ public class MarsHR extends Methods {
         Scanner scanner = new Scanner(System.in);
         timeAndData();
 
-        // https://www.hackerrank.com/challenges/mars-exploration/problem?utm_
-        // campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
+        /**
+         @Web: https://www.hackerrank.com/challenges/mars-exploration/problem?utm_
+         campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
 
-        // SOSSPSSQSSOR;
-        // SOSTOT
+         @in: SOSSPSSQSSOR;
+         @out: SOSTOT;
+         */
 
         String input = "SOSSPSSQSSOR";
         String message = "SOS";
