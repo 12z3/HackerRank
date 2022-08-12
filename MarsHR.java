@@ -13,6 +13,13 @@ public class MarsHR extends Methods {
          @Web: https://www.hackerrank.com/challenges/mars-exploration/problem?utm_
          campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
 
+         @Problem: Letters in some SOS messages are altered by cosmic radiation during transmission.
+         Given the signal received by Earth as a string,
+         determine how many letters of the SOS message have been changed by radiation.
+
+         Example
+         The original message was SOSSOS. Two of the message's characters were changed in transit.
+
          @in: SOSSPSSQSSOR;
          @out: SOSTOT;
          */
