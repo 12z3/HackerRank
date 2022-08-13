@@ -63,10 +63,10 @@ public class HRSherlockArrayNew extends Methods {
                 sumL = sumR = 0;                                 //  int[] input = {1, 3, 4, 5, 6, 7};
                 left = new int[i];                 // Размера на лявата и дясната част се определя от стойността на "i".
                 for (int j = 0; j < i; j++) {                    // В случая на i = 2 -> Лява част: -> [1,3]
-                    left[j] = input[j];
+                    left[j] = input[j];            // Колкото елем. добавя в лявата част...
                     sumL += left[j];
                 }
-                right = new int[input.length - i - 1];
+                right = new int[input.length - i - 1];  //... Толкова се премахват в дясната
                 for (int j = 0; j < input.length - i - 1; j++) {
                     right[j] = input[j + i + 1];                 // В случая на i = 2 -> Дясна част: -> [5,6,7]
                     sumR += right[j];
