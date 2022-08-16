@@ -10,6 +10,8 @@ public class HRAbsoluteDifference {
 
          @Web: https://www.hackerrank.com/challenges/minimum-absolute-difference-in-an-array/
          problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
+         @Solution: https://programs.programmingoneonone.com/2021/03/
+         hackerRank-minimum-absolute-difference-in-an-array-solution.html
          @Discussions: https://www.hackerrank.com/challenges/minimum-absolute-difference-in-an-array/forum
          */
 
