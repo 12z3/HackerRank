@@ -19,9 +19,15 @@ public class HRMarcsCakewalk{
     }
 
     public static void main(String[] args) {
-        int[] massive = {7, 4, 9, 6};
-        long result = 0;
 
+        /**
+         @Problem: https://www.hackerrank.com/challenges/marcs-cakewalk/
+         problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
+         @Discussions: https://www.hackerrank.com/challenges/marcs-cakewalk/forum
+         */
+
+
+        int[] massive = {7, 4, 9, 6};
         System.out.printf("%d ", marcsCakewalk(massive));
 
     }
