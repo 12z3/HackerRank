@@ -10,15 +10,19 @@ public class HRGridChallenge {
      * rearrange elements of each row alphabetically, ascending.
      * Determine if the columns are also in ascending alphabetical order,
      * top to bottom. Return YES if they are or NO if they are not.
+     *
      * @Source: https://www.hackerrank.com/challenges/grid-challenge/
      * problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
      * @Discussins: https://www.hackerrank.com/challenges/grid-challenge/forum
+     *
      * @Input: ebacd   grid = {"ebacd", "fghij", "olmkn", "trpqs", "xywuv"}
      * fghij
      * olmkn
      * trpqs
      * xywuv
-     * @Output: YES
+     * 
+     * @Output:
+     * YES
      * abcde
      * fghij
      * klmno
