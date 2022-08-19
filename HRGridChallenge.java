@@ -20,7 +20,7 @@ public class HRGridChallenge {
      * olmkn
      * trpqs
      * xywuv
-     * 
+     *
      * @Output:
      * YES
      * abcde
@@ -44,9 +44,9 @@ public class HRGridChallenge {
 
         for (int i = 0; i < input.length; i++) {
             a = null;
-            a = new char[input[i].length()];                    // a[дължината на всяка една дума / ebacd...fghij]
-            for (int j = 0; j < input[i].length(); j++) {       // input[i].length() = броя букви в тази дума.
-                a[j] = input[i].charAt(j);                      // input[i].charAt(j) = всяка една буква от думата.
+            a = new char[input[i].length()];                 // a[дължината на всяка една дума / ebacd...fghij]
+            for (int j = 0; j < input[i].length(); j++) {    // input[i].length() = броя букви в тази дума.
+                a[j] = input[i].charAt(j);                   // input[i].charAt(j) = всяка една буква "j" от думата "i".
             }
             Arrays.sort(a);
             stb.append(a).append(" ");
