@@ -54,7 +54,7 @@ public class HRGridChallenge {
 
         System.out.println(stb);
 
-        b = new char[input.length + 1][input.length + 1];       // Трябвда да се измисли за по ЦИВИЛИЗОВАН начин за -
+        b = new char[input.length + 1][input.length + 1];       // Трябвда да се мисли за по ЦИВИЛИЗОВАН начин за -
         for (int row = 0; row < input.length; row++) {          // - инициализиране на b[row][col]....???
             for (int col = 0; col < a.length; col++) {
                 b[row][col] = stb.charAt(col);                  // b[row][col] = всяка една буква от дадената дума.
