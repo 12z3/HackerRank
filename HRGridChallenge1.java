@@ -11,12 +11,12 @@ public class HRGridChallenge1 {
 
 
         List<String> lists = Arrays.asList("mpxz", "abcd", "wlmf");
-         List<String> lists1 = Arrays.asList("ebacd", "fghij", "olmkn", "trpqs", "xywuv");
+        List<String> lists1 = Arrays.asList("ebacd", "fghij", "olmkn", "trpqs", "xywuv");
 
         StringBuilder stb = new StringBuilder();
         int countLength = 0, countNumbersOfCharInThatWord = 0;
         int countNo = 0;
-        char[] a = new char[0];
+        char[] a;
 
         for (int i = 0; i < lists.size(); i++) {
             a = new char[lists.get(i).length()];
@@ -31,16 +31,14 @@ public class HRGridChallenge1 {
         }
 
         System.out.println(stb);
-        System.out.println(lists);
 
-        char[][] b = new char[0][0];
         for (int i = 0; i < lists.size(); i++) {
             for (int j = 0; j < lists.get(i).length(); j++) {
                 countLength++;
             }
         }
 
-        b = new char[lists.size()][countLength];
+        char[][] b = new char[lists.size() + 1][lists.size() + 1];
         for (int row = 0; row < lists.size(); row++) {
             countNumbersOfCharInThatWord = 0;
             for (int col = 0, l = 0; col < lists.get(row).length(); col++, l++) {
@@ -51,12 +49,12 @@ public class HRGridChallenge1 {
         }
 
         for (int col = 0; col < lists.size(); col++) {
-            for (int row = 0; row < lists.size()-1; row++) {
+            for (int row = 0; row < lists.size() - 1; row++) {
                 if (b[row][col] > b[row + 1][col]) countNo++;
             }
         }
 
-        if (countNo != 0){
+        if (countNo != 0) {
             System.out.print("NO");
         } else System.out.print("YES");
 
