@@ -20,8 +20,8 @@ public class HRCutTheSticks {
 
     public static void main(String[] args) {
 
-//        List<Integer> list1 = Arrays.asList(1, 2, 3);
-//        List<Integer> list2 = Arrays.asList(5, 4, 4, 2, 2, 8);
+//      List<Integer> list1 = Arrays.asList(1, 2, 3);
+//      List<Integer> list2 = Arrays.asList(5, 4, 4, 2, 2, 8);
         List<Integer> list = new ArrayList<>(List.of(5, 4, 4, 2, 2, 8));
         List<Integer> list1 = new ArrayList<>(List.of(1, 2, 3));
 
