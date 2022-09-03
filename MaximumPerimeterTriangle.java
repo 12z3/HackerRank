@@ -22,8 +22,8 @@ public class MaximumPerimeterTriangle {
     public static void main(String[] args) {
         List<Integer> input1 = new ArrayList<>(List.of(1, 2, 3, 4, 5, 10));
         List<Integer> input = new ArrayList<>(List.of(1, 1, 1, 3, 3));
-        maximumPerimeterTriangle(input);
 
+        maximumPerimeterTriangle(input);
     }
 
     private static void maximumPerimeterTriangle(List<Integer> input) {
