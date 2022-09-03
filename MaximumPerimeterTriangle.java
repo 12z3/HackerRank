@@ -20,7 +20,8 @@ public class MaximumPerimeterTriangle {
      */
 
     public static void main(String[] args) {
-        List<Integer> input = new ArrayList<>(List.of(1, 2, 3, 4, 5, 10));
+        List<Integer> input1 = new ArrayList<>(List.of(1, 2, 3, 4, 5, 10));
+        List<Integer> input = new ArrayList<>(List.of(1, 1, 1, 3, 3));
         maximumPerimeterTriangle(input);
 
     }
@@ -46,11 +47,11 @@ public class MaximumPerimeterTriangle {
                         res.add(c);
                         Collections.sort(res);
                         result.add(res);
-
                     }
                 }
             }
         }
+
         assert false;
         System.out.println(result.toString());
     }
