@@ -34,6 +34,7 @@ public class MaximumPerimeterTriangle {
         int a = 0, b = 0, c = 0;                      // [[2, 3, 4], [2, 4, 5], [3, 4, 5]]
         for (int i = 0; i < input.size(); i++) {
             a = input.get(i);
+            if (a == 0) continue;
             for (int j = i + 1; j < input.size(); j++) {
                 if (i != j) b = input.get(j);
                 if (b == 0) continue;
