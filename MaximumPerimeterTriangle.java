@@ -1,5 +1,4 @@
 package hackerRank;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -53,7 +52,6 @@ public class MaximumPerimeterTriangle {
                 }
             }
         }
-
         assert false;
         System.out.println(result.toString());
     }
@@ -62,6 +60,4 @@ public class MaximumPerimeterTriangle {
         if ((a + b) > c && (a + c) > b && (b + c) > a) return true;
         else return false;
     }
-
-
 }
