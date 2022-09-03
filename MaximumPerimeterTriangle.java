@@ -14,6 +14,7 @@ public class MaximumPerimeterTriangle {
      * Choose the one with the longest maximum side.
      * If more than one has that maximum, choose from them the one with the longest minimum side.
      * If more than one has that maximum as well, print any one them.
+     * <p>
      * @Web: <a href="https://www.hackerrank.com/challenges/maximum-perimeter-triangle/">...</a>
      * problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
      * @Discussions: <a href="https://www.hackerrank.com/challenges/maximum-perimeter-triangle/forum">...</a>
@@ -29,7 +30,7 @@ public class MaximumPerimeterTriangle {
     private static void maximumPerimeterTriangle(List<Integer> input) {
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> res = null;
-                                                      // (1, 2, 3, 4, 5, 10)
+        // (1, 2, 3, 4, 5, 10)
         int a = 0, b = 0, c = 0;                      // [[2, 3, 4], [2, 4, 5], [3, 4, 5]]
         for (int i = 0; i < input.size(); i++) {
             a = input.get(i);
