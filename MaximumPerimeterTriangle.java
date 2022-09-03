@@ -30,7 +30,7 @@ public class MaximumPerimeterTriangle {
     private static void maximumPerimeterTriangle(List<Integer> input) {
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> res = null;
-        // (1, 2, 3, 4, 5, 10)
+                                                      // (1, 2, 3, 4, 5, 10)
         int a = 0, b = 0, c = 0;                      // [[2, 3, 4], [2, 4, 5], [3, 4, 5]]
         for (int i = 0; i < input.size(); i++) {
             a = input.get(i);
