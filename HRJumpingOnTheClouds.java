@@ -36,11 +36,11 @@ public class HRJumpingOnTheClouds {
                 i += 2;
                 result.add(i);
                 jump++;
-            } else {
+            } else if (input.get(i + 1) != 1) {
                 i++;
                 result.add(i);
                 jump++;
-            }
+            } else return -1;
         }
 
         for (int el : result) System.out.print(el + " ");
