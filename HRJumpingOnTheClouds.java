@@ -1,4 +1,5 @@
 package hackerRank;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +38,7 @@ public class HRJumpingOnTheClouds {
                 i += 2;
                 result.add(i);
                 jump++;
-            } else if (i < input.size()) {
+            } else  {
                 i++;
                 result.add(i);
                 jump++;
