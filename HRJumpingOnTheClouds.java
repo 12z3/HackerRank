@@ -1,5 +1,4 @@
 package hackerRank;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,8 +17,7 @@ public class HRJumpingOnTheClouds {
      * problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign">...</a>
      * @Discussions: <a href="https://www.hackerrank.com/challenges/jumping-on-the-clouds/forum">...</a>
      */
-
-
+    
     public static void main(String[] args) {
         List<Integer> input1 = new ArrayList<>(List.of(0, 1, 0, 0, 0, 1, 0));
         List<Integer> input2 = new ArrayList<>(List.of(0, 0, 1, 0, 0, 1, 0));
@@ -38,7 +36,7 @@ public class HRJumpingOnTheClouds {
                 i += 2;
                 result.add(i);
                 jump++;
-            } else  {
+            } else {
                 i++;
                 result.add(i);
                 jump++;
