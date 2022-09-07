@@ -1,6 +1,7 @@
 package hackerRank;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class HREqualizetheArray {
@@ -21,7 +22,8 @@ public class HREqualizetheArray {
                 10, 27, 9, 10, 100, 38, 30, 32, 45, 29, 27, 29,
                 32, 38, 32, 38, 14, 38, 29, 30, 63, 29, 63, 91, 54, 10, 63));      // Correct = 23 != My = 19
 
-        List<Integer> indexes = new ArrayList<>();
+        List<Integer> indexes = new ArrayList<>();               // Какаво сатва ако дава елемента са с еднакви max?
+        List<Integer> maxIndexOfElement = new ArrayList<>();
         int count = 0, counter = 0, max = Integer.MIN_VALUE;
 
         for (int i = 0; i < input.size(); i++) {
@@ -35,14 +37,24 @@ public class HREqualizetheArray {
         }
 
         for (int i = 0; i < indexes.size(); i++) {
-            if (indexes.get(i) > max) max = indexes.get(i);
+            if (indexes.get(i) > max) {
+                max = indexes.get(i);
+                maxIndexOfElement.add(max);
+            }
         }
 
         for (int i = 0; i < indexes.size(); i++) {
             if (indexes.get(i) < max) counter++;
         }
 
+//        Collections.sort(indexes);
+        Collections.sort(input);
+
         for (int el : indexes) System.out.print(el + " ");
+        System.out.println();
+        for (int el : input) System.out.print(el + " ");
+        System.out.println();
+        for (int el : maxIndexOfElement) System.out.print(el + " ");
         System.out.println();
         System.out.println(counter);
 
