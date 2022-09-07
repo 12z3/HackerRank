@@ -19,7 +19,7 @@ public class HREqualizetheArray {
         List<Integer> input3 = new ArrayList<>(List.of(1, 2, 3, 1, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4));
         List<Integer> input = new ArrayList<>(List.of(
                 10, 27, 9, 10, 100, 38, 30, 32, 45, 29, 27, 29,
-                32, 38, 32, 38, 14, 38, 29, 30, 63, 29, 63, 91, 54, 10, 63));
+                32, 38, 32, 38, 14, 38, 29, 30, 63, 29, 63, 91, 54, 10, 63));      // Correct = 23 != My = 19
 
         List<Integer> indexes = new ArrayList<>();
         int count = 0, counter = 0, max = Integer.MIN_VALUE;
