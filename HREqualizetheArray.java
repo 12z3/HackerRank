@@ -1,7 +1,6 @@
 package hackerRank;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class HREqualizetheArray {
@@ -25,7 +24,7 @@ public class HREqualizetheArray {
         List<Integer> indexes = new ArrayList<>();               // Какво става ако два елемента са с еднакви max?
         List<Integer> elementWithThisIndex = new ArrayList<>();
         List<Integer> elements = new ArrayList<>();
-        int countOfMatches = 0, counter = 0, counter1 = 0, maxIndex = 0, max = Integer.MIN_VALUE;
+        int countOfMatches = 0, counter = 0, countMaxIndex = 0, max = Integer.MIN_VALUE;
 
         for (int i = 0; i < input.size(); i++) {
             countOfMatches = 0;
@@ -41,20 +40,16 @@ public class HREqualizetheArray {
         for (int i = 0; i < indexes.size(); i++) {
             if (indexes.get(i) > max) {
                 max = indexes.get(i);
-                maxIndex = i;
-                elementWithThisIndex.add(input.get(maxIndex));
             }
         }
 
         for (int i = 0; i < indexes.size(); i++) {
-            if (indexes.get(i) < max) counter1++;
+            if (indexes.get(i) < max) counter++;
+            if (indexes.get(i) == max) {
+                countMaxIndex++;
+                elementWithThisIndex.add(input.get(i));
+            }
         }
-
-        for (int i = 0; i < input.size(); i++) {
-            System.out.println(elements.get(i) + " = " + indexes.get(i));
-        }
-
-        Collections.sort(input);
 
         for (int el : input) System.out.print(el + " ");
         System.out.println();
@@ -63,6 +58,8 @@ public class HREqualizetheArray {
         for (int el : elements) System.out.print(el + " ");
         System.out.println();
         System.out.println(counter);
+        System.out.println(countMaxIndex);
+        System.out.println(elementWithThisIndex);
 
     }
 }
