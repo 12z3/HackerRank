@@ -23,38 +23,44 @@ public class HREqualizetheArray {
                 32, 38, 32, 38, 14, 38, 29, 30, 63, 29, 63, 91, 54, 10, 63));      // Correct = 23 != My = 19
 
         List<Integer> indexes = new ArrayList<>();               // Какво става ако два елемента са с еднакви max?
-        List<Integer> maxIndexOfElement = new ArrayList<>();
-        int count = 0, counter = 0, max = Integer.MIN_VALUE;
+        List<Integer> elementWithThisIndex = new ArrayList<>();
+        List<Integer> elements = new ArrayList<>();
+        int countOfMatches = 0, counter = 0, counter1 = 0, maxIndex = 0, max = Integer.MIN_VALUE;
 
         for (int i = 0; i < input.size(); i++) {
-            count = 0;
+            countOfMatches = 0;
             int a = input.get(i);
             for (int j = 0; j < input.size(); j++) {
                 int b = input.get(j);
-                if (a == b) count++;
+                if (a == b) countOfMatches++;
             }
-            indexes.add(count);
+            indexes.add(countOfMatches);
+            elements.add(input.get(i));
         }
 
         for (int i = 0; i < indexes.size(); i++) {
             if (indexes.get(i) > max) {
                 max = indexes.get(i);
-                maxIndexOfElement.add(max);
+                maxIndex = i;
+                elementWithThisIndex.add(input.get(maxIndex));
             }
         }
 
         for (int i = 0; i < indexes.size(); i++) {
-            if (indexes.get(i) < max) counter++;
+            if (indexes.get(i) < max) counter1++;
         }
 
-//        Collections.sort(indexes);
+        for (int i = 0; i < input.size(); i++) {
+            System.out.println(elements.get(i) + " = " + indexes.get(i));
+        }
+
         Collections.sort(input);
 
-        for (int el : indexes) System.out.print(el + " ");
-        System.out.println();
         for (int el : input) System.out.print(el + " ");
         System.out.println();
-        for (int el : maxIndexOfElement) System.out.print(el + " ");
+        for (int el : indexes) System.out.print(el + " ");
+        System.out.println();
+        for (int el : elements) System.out.print(el + " ");
         System.out.println();
         System.out.println(counter);
 
