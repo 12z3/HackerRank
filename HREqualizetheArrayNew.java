@@ -38,7 +38,7 @@ public class HREqualizetheArrayNew {
         List<Integer> counter = new ArrayList<>();                              // (1, 5, 8, 8, 8, 1, 5, 1)
         int max = Integer.MIN_VALUE, countMax = 0;                              // 1 и 8 са с еднакви повторения, но
         int maxDigit = 0;
-                                                                  // от резултата трябва да се премахне само или
+                                                                    // от резултата трябва да се премахне само или
         for (int i = 0; i < input.size(); i++) {                    // повторенията на 1-а или тези на 8-а.
             countMax = 0;
             for (int j = 0; j < input.size(); j++) {
@@ -49,7 +49,7 @@ public class HREqualizetheArrayNew {
 
         for (int i = 0; i < counter.size(); i++) {
             if (counter.get(i) > max) {
-                max = counter.get(i);
+                max = counter.get(i);                          // Изтрия ли този ред резултата Ще се увеличи с 1
                 maxDigit = input.get(i);
             }
         }
