@@ -19,13 +19,13 @@ public class HRHalloweenSale {
      * @Discussions: <a href="https://www.hackerrank.com/challenges/halloween-sale/forum">...</a>
      */
     public static void main(String[] args) {
-        System.out.println(halloweenSale(20,3,6,70));
+        System.out.println(halloweenSale(20, 3, 6, 70));
     }
 
     private static int halloweenSale(int p, int d, int m, int s) {
         //int p = 20, d = 3, m = 6, s = 70;
-        int money = p;
-        int price = s;
+        int money = p, price = s;
+
         List<Integer> list = new ArrayList<>();
 
         list.add(p);
