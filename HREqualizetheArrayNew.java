@@ -29,7 +29,7 @@ public class HREqualizetheArrayNew {
                 10, 27, 9, 10, 100, 38, 30, 32, 45, 29, 27, 29,
                 32, 38, 32, 38, 14, 38, 29, 30, 63, 29, 63, 91, 54, 10, 63));           // 23 != 19 - My
                                                                                         // (1, 5, 8, 8, 8, 1, 5, 1)
-        equalizetheArray(arr);
+        System.out.println( equalizetheArray(arr));
 
     }
 
@@ -49,10 +49,11 @@ public class HREqualizetheArrayNew {
 
         for (int i = 0; i < counter.size(); i++) {
             if (counter.get(i) > max) {
+                max = counter.get(i);
                 maxDigit = input.get(i);
             }
         }
-        
+
         int finalMaxDigit = maxDigit;
         input.removeIf(el -> el == finalMaxDigit);
 
