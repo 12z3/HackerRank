@@ -34,32 +34,29 @@ public class HREqualizetheArrayNew {
     }
 
 
-    private static int equalizetheArray(List<Integer> arr) {
+    private static int equalizetheArray(List<Integer> input) {
         List<Integer> counter = new ArrayList<>();                              // (1, 5, 8, 8, 8, 1, 5, 1)
         int max = Integer.MIN_VALUE, countMax = 0;                              // 1 и 8 са с еднакви повторения, но
         int maxDigit = 0;
                                                                   // от резултата трябва да се премахне само или
-        for (int i = 0; i < arr.size(); i++) {                    // повторенията на 1-а или тези на 8-а.
+        for (int i = 0; i < input.size(); i++) {                    // повторенията на 1-а или тези на 8-а.
             countMax = 0;
-            for (int j = 0; j < arr.size(); j++) {
-                if (Objects.equals(arr.get(i), arr.get(j))) countMax++;
+            for (int j = 0; j < input.size(); j++) {
+                if (Objects.equals(input.get(i), input.get(j))) countMax++;
             }
             counter.add(countMax);
         }
 
         for (int i = 0; i < counter.size(); i++) {
             if (counter.get(i) > max) {
-                max = counter.get(i);
-                maxDigit = arr.get(i);
+                maxDigit = input.get(i);
             }
         }
-
-        int finalMax = max;
+        
         int finalMaxDigit = maxDigit;
-        counter.removeIf(el -> el == finalMax);
-        arr.removeIf(el -> el == finalMaxDigit);
+        input.removeIf(el -> el == finalMaxDigit);
 
-        return arr.size();
+        return input.size();
     }
 }
 
