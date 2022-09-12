@@ -18,60 +18,29 @@ public class HRHalloweenSale {
      * recommendation&utm_medium=email&utm_source=24-hour-campaign&h_r=next-challenge&h_v=zen ...</a>
      * @Discussions: <a href="https://www.hackerrank.com/challenges/halloween-sale/forum">...</a>
      */
+
     public static void main(String[] args) {
         System.out.println(halloweenSale(20, 3, 6, 70));
+        //int p = 20, d = 3, m = 6, s = 70;
     }
 
     private static int halloweenSale(int p, int d, int m, int s) {
-        //int p = 20, d = 3, m = 6, s = 70;
-        int money = p, price = s;
-
+        int money = p, count = 0, price = s;
         List<Integer> list = new ArrayList<>();
 
-        list.add(p);
-        while (true) {
-            if (money + m < price) {
-                if (p - d >= m) {
-                    list.add(p - d);
-                    money += (p - d);
-                    p -= d;
-                } else {
-                    list.add(m);
-                    money += m;
-                }
-            } else break;
-
+        while (money <= price) {
+            if ((p - d) > m) {
+                list.add(p - d);
+                money += (p - d);
+                p -= d;
+                count++;
+            } else {
+                list.add(m);
+                money += m;
+                count++;
+            }
         }
         System.out.println(list);
-        return list.size();
+        return count;
     }
 }
-
-//    public static int howManyGames(int p, int d, int m, int s) {
-//        // Return the number of games you can buy
-//        int res=0;
-//        while(p>m){
-//            s-=p;
-//            if(s>0){
-//                res++;
-//            }
-//
-//            p-=d;
-//        }
-//        return s/m>=0?res+s/m:res;
-//    }
-
-
-
-//    public static int howManyGames(int p, int d, int m, int s) {
-//        int res=0;
-//        while(s>=p){
-//            s=s-p;
-//            res++;
-//            p=p-d;
-//            if (p<m) {
-//                p=m;
-//            }
-//        }
-//        return res;
-//    }
