@@ -47,3 +47,32 @@ public class HRHalloweenSale {
         return list.size();
     }
 }
+
+//    public static int howManyGames(int p, int d, int m, int s) {
+//        // Return the number of games you can buy
+//        int res=0;
+//        while(p>m){
+//            s-=p;
+//            if(s>0){
+//                res++;
+//            }
+//
+//            p-=d;
+//        }
+//        return s/m>=0?res+s/m:res;
+//    }
+
+
+
+//    public static int howManyGames(int p, int d, int m, int s) {
+//        int res=0;
+//        while(s>=p){
+//            s=s-p;
+//            res++;
+//            p=p-d;
+//            if (p<m) {
+//                p=m;
+//            }
+//        }
+//        return res;
+//    }
