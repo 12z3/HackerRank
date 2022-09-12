@@ -3,7 +3,6 @@ package hackerRank;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.Scanner;
 
 public class HREqualizetheArrayNew {
     /**
@@ -14,7 +13,6 @@ public class HREqualizetheArrayNew {
      * @Discussions: <a href="https://www.hackerrank.com/challenges/equality-in-a-array/forum">...</a>
      */
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
         List<Integer> input1 = new ArrayList<>(List.of(1, 2, 3, 1, 2, 2, 3, 3, 1, 3));
         List<Integer> input7 = new ArrayList<>(List.of(1, 5, 8, 8, 8, 1, 5));
@@ -25,11 +23,11 @@ public class HREqualizetheArrayNew {
         List<Integer> input6 = new ArrayList<>(List.of(1, 2, 3, 1, 2, 3, 3, 3));
         List<Integer> input3 = new ArrayList<>(List.of(1, 2, 3, 1, 2, 2, 3, 3, 1));
         List<Integer> input4 = new ArrayList<>(List.of(1, 2, 3, 1, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4));
-        List<Integer> arr = new ArrayList<>(List.of(
+        List<Integer> input = new ArrayList<>(List.of(
                 10, 27, 9, 10, 100, 38, 30, 32, 45, 29, 27, 29,
                 32, 38, 32, 38, 14, 38, 29, 30, 63, 29, 63, 91, 54, 10, 63));           // 23 != 19 - My
                                                                                         // (1, 5, 8, 8, 8, 1, 5, 1)
-        System.out.println( equalizetheArray(arr));
+        System.out.println( equalizetheArray(input));
 
     }
 
