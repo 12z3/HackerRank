@@ -35,7 +35,6 @@ public class HRHalloweenSale {
                     list.add(p - d);
                     money += (p - d);
                     p -= d;
-                    s -= (p - d);
                 } else {
                     list.add(m);
                     money += m;
