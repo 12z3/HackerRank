@@ -14,6 +14,7 @@ public class HRHalloweenSale {
      * will cost D dollars less than the previous one.
      * This continues until the cost becomes less than or equal to M dollars,
      * after which every game will cost M dollars. How many games can you buy during the Halloween Sale?
+     *
      * @Web: <a href="https://www.hackerrank.com/challenges/halloween-sale/problem?utm_campaign=challenge-">
      * recommendation&utm_medium=email&utm_source=24-hour-campaign&h_r=next-challenge&h_v=zen ...</a>
      * @Discussions: <a href="https://www.hackerrank.com/challenges/halloween-sale/forum">...</a>
