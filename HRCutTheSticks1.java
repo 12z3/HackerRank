@@ -18,25 +18,26 @@ public class HRCutTheSticks1 {
      * @Discussion: https://www.hackerrank.com/challenges/cut-the-sticks/forum
      */
 
-    private static void cutTheSticks(List<Integer> list) {
-        List<Integer> result = new ArrayList<>();
-        while (list.size() > 0) {
-            result.add(list.size());
-            int min = Collections.min(list);
-            list.removeIf(el -> el == min);                                   
-
-            for (int i = 0; i < list.size(); i++) {
-                list.set(i, (list.get(i) - min));
-            }
-        }
-    }
-
     public static void main(String[] args) {
 
         List<Integer> list = new ArrayList<>(List.of(5, 4, 4, 2, 2, 8));
         List<Integer> list1 = new ArrayList<>(List.of(1, 2, 3));
 
         cutTheSticks(list);
+    }
+
+    private static void cutTheSticks(List<Integer> list) {
+        List<Integer> result = new ArrayList<>();
+        while (list.size() > 0) {
+            result.add(list.size());
+            int min = Collections.min(list);
+            list.removeIf(el -> el == min);
+
+            for (int i = 0; i < list.size(); i++) {
+                list.set(i, (list.get(i) - min));
+            }
+        }
+        System.out.println(result);
     }
 }
 
