@@ -16,16 +16,16 @@ public class HRBeautifulTriplets {
         System.out.println(beautifulTriplets(list, 3));
     }
 
-    private static int beautifulTriplets(List<Integer> arr, int d) {
-        StringBuilder stb = new StringBuilder();
+    private static int beautifulTriplets(List<Integer> input, int d) {
+        StringBuilder result = new StringBuilder();
         int count = 0;
 
-        for (int i = 0; i < arr.size(); i++) {
-            int a = arr.get(i);
+        for (int i = 0; i < input.size(); i++) {
+            int a = input.get(i);
             int b = a + d;
             int c = b + d;
-            if (arr.contains(a) && arr.contains(b) && arr.contains(c)){
-                stb.append(a).append(b).append(c).append(" ");
+            if (input.contains(a) && input.contains(b) && input.contains(c)){
+                result.append(a).append(b).append(c).append(" ");
                 count++;
             }
         }
