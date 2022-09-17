@@ -29,6 +29,7 @@ public class HRBeautifulTriplets {
                 count++;
             }
         }
+        System.out.println(result);
         return count;
     }
 }
