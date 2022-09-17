@@ -22,8 +22,8 @@ public class HRBeautifulTriplets {
 
         for (int i = 0; i < input.size(); i++) {
             int a = input.get(i);
-            int b = a + d;
-            int c = b + d;
+            int b = a + d, c = b + d;
+
             if (input.contains(a) && input.contains(b) && input.contains(c)){
                 result.append(a).append(b).append(c).append(" ");
                 count++;
