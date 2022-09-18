@@ -31,11 +31,11 @@ public class HRBeautifulTriplets {
         return count;
     }
 
-    public static boolean isResultContains(List<Integer> list, int a, int b, int c) {
+    public static boolean isResultContains(List<Integer> result, int a, int b, int c) {
         boolean A = false, B = false, C = false;
-        A = is(list, a);
-        B = is(list, b);
-        C = is(list, c);
+        A = is(result, a);
+        B = is(result, b);
+        C = is(result, c);
 
         if (A && B && C) return true;
         return false;
