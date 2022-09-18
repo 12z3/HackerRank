@@ -142,7 +142,7 @@ public class TemperatureData extends Methods {
                 int tempValue =  temperatureArray[month - 1][day - 1];               // Обхожда масива от 1-я елемент.
                 if (tempValue > maxT) {
                     maxT = tempValue;
-                    montHName[month - 1] = monthName;                 // Запълва давата масива: montHName[]  и temp[].
+                    montHName[month - 1] = monthName;                 // Запълва двата масива: montHName[]  и temp[].
                     temperature[month - 1] = maxT;
                 }
             }
@@ -167,7 +167,7 @@ public class TemperatureData extends Methods {
                 int tempValue =  temperatureArray[month - 1][day - 1];
                 if (tempValue < minT) {                                  // Обхожда масива от 1-я елемент.
                     minT = tempValue;
-                    montHName[month - 1] = monthName;           // Запълва давата масива: montHName[]  и temp[].
+                    montHName[month - 1] = monthName;           // Запълва двата масива: montHName[]  и temp[].
                     temperature[month - 1] = minT; // За всеки месец намира min T и запълва двата масива [месеца] и [Т]
                 }                                  // ... На края разполагам с два масива: [minT] и [monthName]
             }
@@ -431,7 +431,7 @@ public class TemperatureData extends Methods {
         printMinMaxAvrTempByMonth(temperature);
         System.out.print("\n\n");
 
-        System.out.print("Statistic is: \n");
+        System.out.print("Statistic: \n");
         System.out.print("------------------ \n");
 
         printMinTemperature(temperature);
