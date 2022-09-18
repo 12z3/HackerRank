@@ -7,7 +7,6 @@ public class HRBeautifulTriplets {
     /**
      * @Problem: <a href="https://www.hackerrank.com/challenges/beautiful-triplets/">...</a>
      * problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
-     *
      * @Discussions: <a href="https://www.hackerrank.com/challenges/beautiful-triplets/forum">...</a>
      */
     public static void main(String[] args) {
@@ -23,7 +22,7 @@ public class HRBeautifulTriplets {
         for (int i = 0; i < input.size(); i++) {
             int a = input.get(i);
             int b = a + d, c = b + d;
-            if (checkElement(input, a, b, c)) {
+            if (isElementContains(input, a, b, c)) {
                 count++;
                 result.append(a).append(b).append(c).append(" ");
             }
@@ -32,7 +31,7 @@ public class HRBeautifulTriplets {
         return count;
     }
 
-    public static boolean checkElement(List<Integer> list, int a, int b, int c){
+    public static boolean isElementContains(List<Integer> list, int a, int b, int c) {
         boolean isA = false, isB = false, isC = false;
         isA = isThis(list, a);
         isB = isThis(list, b);
