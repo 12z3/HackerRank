@@ -22,7 +22,7 @@ public class HRBeautifulTriplets {
         for (int i = 0; i < input.size(); i++) {
             int a = input.get(i);
             int b = a + d, c = b + d;
-            if (isElementContains(input, a, b, c)) {
+            if (isResultContains(input, a, b, c)) {
                 count++;
                 result.append(a).append(b).append(c).append(" ");
             }
@@ -31,17 +31,17 @@ public class HRBeautifulTriplets {
         return count;
     }
 
-    public static boolean isElementContains(List<Integer> list, int a, int b, int c) {
-        boolean isA = false, isB = false, isC = false;
-        isA = isThis(list, a);
-        isB = isThis(list, b);
-        isC = isThis(list, c);
+    public static boolean isResultContains(List<Integer> list, int a, int b, int c) {
+        boolean A = false, B = false, C = false;
+        A = is(list, a);
+        B = is(list, b);
+        C = is(list, c);
 
-        if (isA && isB && isC) return true;
+        if (A && B && C) return true;
         return false;
     }
 
-    private static boolean isThis(List<Integer> list, int el) {
+    private static boolean is(List<Integer> list, int el) {
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i) == el) return true;
         }
