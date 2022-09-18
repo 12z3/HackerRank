@@ -23,16 +23,50 @@ public class HRBeautifulTriplets {
         for (int i = 0; i < input.size(); i++) {
             int a = input.get(i);
             int b = a + d, c = b + d;
-
-            if (input.contains(a) && input.contains(b) && input.contains(c)){
-                result.append(a).append(b).append(c).append(" ");
+            if (checkElement(input, a, b, c)) {
                 count++;
+                result.append(a).append(b).append(c).append(" ");
             }
         }
         System.out.println(result);
         return count;
     }
+
+    public static boolean checkElement(List<Integer> list, int a, int b, int c){
+        boolean isA = false, isB = false, isC = false;
+        isA = isThis(list, a);
+        isB = isThis(list, b);
+        isC = isThis(list, c);
+
+        if (isA && isB && isC) return true;
+        return false;
+    }
+
+    private static boolean isThis(List<Integer> list, int el) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) == el) return true;
+        }
+        return false;
+    }
 }
+
+//    private static int beautifulTriplets(List<Integer> input, int d) {
+//        StringBuilder result = new StringBuilder();
+//        int count = 0;
+//
+//        for (int i = 0; i < input.size(); i++) {
+//            int a = input.get(i);
+//            int b = a + d, c = b + d;
+//
+//            if (input.contains(a) && input.contains(b) && input.contains(c)){
+//                result.append(a).append(b).append(c).append(" ");
+//                count++;
+//            }
+//        }
+//        System.out.println(result);
+//        return count;
+//    }
+
 
 //    private static int beautifulTriplets(List<Integer> arr, int d) {
 //        StringBuilder stb = new StringBuilder();
@@ -50,10 +84,8 @@ public class HRBeautifulTriplets {
 //                        stb.append(a).append(b).append(c).append(" ");
 //                        indexes.append(i).append(j).append(k).append(" ");
 //                        count++;
-//
 //                    }
 //                }
-//
 //            }
 //        }
 //        System.out.println(stb);
