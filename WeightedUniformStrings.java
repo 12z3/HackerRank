@@ -26,23 +26,25 @@ public class WeightedUniformStrings {
 
         String input = "abbcccdddd";
         String input1 = "abccddde";
+
         StringBuilder stb = new StringBuilder();
         List<Integer> weightArr = new ArrayList<>();
         List<Character> list = new ArrayList<>();
         List<Integer> counts = new ArrayList<>();
         List<List<Character>> lists = new ArrayList<>();
         List<List<Integer>> allCounts = new ArrayList<>();
+        
         int thisWeight = 0, index = 0, thisCount = 0, sumWeight = 0, previously = Integer.MIN_VALUE;
         int max = Integer.MIN_VALUE;
 
 
         for (int i = 0; i < input.length(); i++) {
+            if (input.charAt(i) == previously) continue;
+
             thisCount = 0;
             stb = new StringBuilder();
             list = new ArrayList<>();
             counts = new ArrayList<>();
-
-            if (input.charAt(i) == previously) continue;
 
             for (int j = 0; j < letter.length; j++) {
                 if (input.charAt(i) == letter[j]) {
@@ -61,18 +63,20 @@ public class WeightedUniformStrings {
             }
             previously = input.charAt(i);
             System.out.println(stb);
-            allCounts.add(counts);
             lists.add(list);
             weightArr.add(thisCount);
+            allCounts.add(counts);
 
         }
 
-        for (int el: counts) System.out.print(el + " ");
         for (List<Character> el: lists) System.out.print(el + " ");
         System.out.println();
         for (List<Integer> el: allCounts) System.out.print(el + " ");
         System.out.println();
         for (int el: weightArr) System.out.print(el + " ");
+        System.out.println();
+        for (int el: counts) System.out.print(el + " ");
+
 
 
 
