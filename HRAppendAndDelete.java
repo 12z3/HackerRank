@@ -8,33 +8,15 @@ public class HRAppendAndDelete {
      */
 
     public static void main(String[] args) {
-        System.out.println(appendAndDelete("hackerhappy", "hackerrank", 9));
+        System.out.println(appendAndDelete1("hackerhappy", "hackerrank", 9));
+        // To convert S to T.
     }
 
-    private static String appendAndDelete(String s, String t, int k){
+    private static String appendAndDelete1(String s, String t, int k) {
         String result = "";
         int min = Math.min(s.length(), t.length());
-
-        if (s.length() % t.length() == 0 && min <= k){
-            result = "YES";
-        } else result = "NO";
-
-
-        return result;
-    }
-
-    private static String appendAndDelete1(String s, String t, int k){
-        String result = "";
-
-        if (s.length() == t.length() && s.length() <= k){
-            result = "YES";
-        } else if (s.length() == t.length() && s.length() >= k) {
-            result = "NO";
-        } else if (s.length() != t.length() && t.length() <= k) {
-            result = "YES";
-        } else result = "NO";
-
-
-        return result;
+        if (s.length() - t.length() >= 0 && (Math.abs(s.length() - t.length()) <= k)) {
+            return "Yes";
+        } else return "No";
     }
 }
