@@ -1,6 +1,20 @@
 package hackerRank;
 
 public class HRSherlockAndSquares {
+
+    /**
+     * @Problem: Watson likes to challenge Sherlock's math ability.
+     * He will provide a starting and ending value that describe a range of integers, inclusive of the endpoints.
+     * Sherlock must determine the number of square integers within that range.
+     *
+     * Note: A square integer is an integer which is the square of an integer, e.g.
+     *
+     * @Source: https://www.hackerrank.com/challenges/sherlock-and-squares/problem?utm_campaign=challenge-
+     * recommendation&utm_medium=email&utm_source=24-hour-campaign
+     * @Discussions: <a href="https://www.hackerrank.com/challenges/sherlock-and-squares/forum">...</a>
+     */
+
+
     public static void main(String[] args) {
 //        System.out.println(sherlockAndSquares(3, 9));
 //        System.out.println(sherlockAndSquares(17, 24));
@@ -14,7 +28,7 @@ public class HRSherlockAndSquares {
         StringBuilder stb2 = new StringBuilder();
                                                                             // Не четни: 2n + 1; Четни: 2n;
         for (double i = 24; i <= 49; i++ ) {                                // ... четното + 1
-            stb2.append(i).append(" ");
+            stb2.append((int) i).append(" ");
             num = Math.floor(Math.sqrt(i));
             if (num * num == i) {
                 stb.append((int) i).append(" ");
@@ -22,7 +36,6 @@ public class HRSherlockAndSquares {
                 count++;
                 i += 2 * num;                                               // -> прескача 2 * num + 1 индекса
             }
-
         }
         System.out.println(count);
         System.out.println(stb);
