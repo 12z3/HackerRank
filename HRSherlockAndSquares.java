@@ -8,22 +8,34 @@ public class HRSherlockAndSquares {
         System.out.println(sherlockAndSquares(100, 1000));
 
         int count = 0;
-        for (double i = 0; i <= 1000; i++) {
-            double num = Math.floor(Math.sqrt(i));
+        double num = 0;
+        StringBuilder stb = new StringBuilder();
+        StringBuilder stb1 = new StringBuilder();
+        StringBuilder stb2 = new StringBuilder();
+                                                                            // Не четни: 2n + 1; Четни: 2n;
+        for (double i = 24; i <= 49; i++ ) {                                // ... четното + 1
+            stb2.append(i).append(" ");
+            num = Math.floor(Math.sqrt(i));
             if (num * num == i) {
+                stb.append((int) i).append(" ");
+                stb1.append((int) num).append(" ");
                 count++;
-                i += 2 * num;
+                i += 2 * num;                                               // -> прескача 2 * num + 1 индекса
             }
 
         }
         System.out.println(count);
+        System.out.println(stb);
+        System.out.println(stb1);
+        System.out.println(stb2);
     }
 
     private static int sherlockAndSquares(int a, int b) {
         int count = 0;
         for (int i = a; i <= b; i++) {
-            int x = i;
-            if (x * x == i) count++;
+            double x = Math.floor(Math.sqrt(i));
+
+
         }
         return count;
     }
