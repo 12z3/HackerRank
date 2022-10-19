@@ -34,9 +34,9 @@ public class HRSherlockAndSquares {
                 stb.append((int) i).append(" ");
                 stb1.append((int) num).append(" ");
                 count++;
-                i += 2 * num;                                               // -> прескача 2 * num + 1 индекса
-            }
-        }
+                i += 2 * num;                                               // -> прескача 2 * num + 1(i++) индекса
+            }                                                               // 1,2,3,4,5,6,7,8,9 - numbers
+        }                                                                   // 0,1,2,3,4,5,6,7,8 - indexes
         System.out.println(count);
         System.out.println(stb);
         System.out.println(stb1);
