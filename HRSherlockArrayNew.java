@@ -1,4 +1,4 @@
-package hackerRank;
+package task.hackerRank;
 
 import training.Methods;
 
@@ -8,7 +8,11 @@ public class HRSherlockArrayNew extends Methods {
     public static void main(String[] args) throws FileNotFoundException {
 
         /**
-         @Source: https://www.hackerrank.com/challenges/sherlock-and-array/problem
+         @Source: https://www.hackerrank.com/challenges/sherlock-and-array/problem:
+
+         Watson gives Sherlock an array of integers. His challenge is to find an element of the array such
+         that the sum of all elements to the left is equal to the sum of all elements to the right.
+
          @Web: https://www.youtube.com/watch?v=xPHJH8RL3mo
          @Discussions: https://www.hackerrank.com/challenges/sherlock-and-array/forum
          @Problem: Watson gives Sherlock an array of integers. His challenge is
