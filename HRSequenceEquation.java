@@ -25,21 +25,16 @@ public class HRSequenceEquation {
 
     private static List<Integer> sequencePermutation(List<Integer> p) {
         List<Integer> result = new ArrayList<>();
-        int n = p.size();
-        for (int x = 1; x <= n; x++) {
-            for (int i = 0; i < p.size(); i++) {
-                boolean isMatch = false;
 
+        for (int x = 1; x <= p.size(); x++) {
+            for (int i = 0; i < p.size(); i++) {
                 if (p.get(i) == x) {
                     int index = i + 1;
                     for (int j = 0; j < p.size(); j++) {
                         int value = p.get(j);
                         if (index == value) result.add(j + 1);
-
                     }
                 }
-
-
             }
         }
 
