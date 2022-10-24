@@ -28,12 +28,12 @@ public class HRSequenceEquation {
     private static List<Integer> sequencePermutation(List<Integer> p) {
         List<Integer> result = new ArrayList<>();
 
-        for (int x = 1; x <= p.size(); x++) {
+        for (int x = 1; x <= p.size(); x++) {                           // За всяко х от i ...
             for (int i = 0; i < p.size(); i++) {
                 if (p.get(i) == x) {
                     int index = i + 1;
-                    for (int j = 0; j < p.size(); j++) {
-                        int value = p.get(j);
+                    for (int j = 0; j < p.size(); j++) {                // ... и за всяко i от j...
+                        int value = p.get(j);                           //... Провери дали е изпълнено "index = value"
                         if (index == value) result.add(j + 1);
                     }
                 }
