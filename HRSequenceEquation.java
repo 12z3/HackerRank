@@ -3,6 +3,7 @@ package task.hackerRank;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 public class HRSequenceEquation {
     public static void main(String[] args) {
@@ -20,6 +21,7 @@ public class HRSequenceEquation {
         pToArr = p.toArray(new Integer[0]);
 
         System.out.println(sequencePermutation(p));
+        System.out.println(sequencePermutationHR(p));
 
     }
 
@@ -39,5 +41,29 @@ public class HRSequenceEquation {
         }
 
         return result;
+    }
+
+    private static List<Integer> sequencePermutationHR(List<Integer> p) {
+        List<Integer> l1 = new ArrayList<>();
+        int num =  0;
+        for (int i = 0; i < p.size(); i++) {
+            for (int j = 0; j < p.size(); j++) {
+                if (p.get(j) == i + 1) {
+                    num = j + 1;
+                }
+            }
+            l1.add(num);
+        }
+        List<Integer> l2 = new ArrayList<>();
+        for (int i = 0; i < l1.size(); i++) {
+            for (int j = 0; j < l1.size(); j++) {
+                if (Objects.equals(p.get(j), l1.get(i))) {
+                    num = j + 1;
+                }
+            }
+            l2.add(num);
+        }
+        return l2;
+
     }
 }
