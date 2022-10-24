@@ -32,7 +32,7 @@ public class HRCircularArrayRotation {
     private static List<Integer> reversRight(List<Integer> a, int k, List<Integer> queries) {
         List<Integer> result = new ArrayList<>();
 
-        Collections.rotate(a, k);
+        Collections.rotate(a, k);                //Завърта елементите в посочения списък на определеното разстояние = k
 
         for (Integer query : queries) {
             result.add(a.get(query));
