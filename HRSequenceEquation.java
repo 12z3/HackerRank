@@ -28,11 +28,11 @@ public class HRSequenceEquation {
     private static List<Integer> sequencePermutation(List<Integer> p) {
         List<Integer> result = new ArrayList<>();
 
-        for (int x = 1; x <= p.size(); x++) {                           // За всяко х от i ...
+        for (int x = 1; x <= p.size(); x++) {                           // За всяко i от x ...
             for (int i = 0; i < p.size(); i++) {
                 if (p.get(i) == x) {
                     int index = i + 1;
-                    for (int j = 0; j < p.size(); j++) {                // ... и за всяко i от j...
+                    for (int j = 0; j < p.size(); j++) {                // ... и за всяко j от i...
                         int value = p.get(j);                           //... Провери дали е изпълнено "index = value"
                         if (index == value) result.add(j + 1);
                     }
@@ -42,7 +42,6 @@ public class HRSequenceEquation {
 
         return result;
     }
-
     private static List<Integer> sequencePermutationHR(List<Integer> p) {
         List<Integer> l1 = new ArrayList<>();
         int num =  0;
