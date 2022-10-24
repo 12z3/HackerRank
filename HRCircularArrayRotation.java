@@ -25,6 +25,7 @@ public class HRCircularArrayRotation {
 
         List<Integer> a = new ArrayList<>(List.of(3, 4, 5));
         List<Integer> queries = new ArrayList<>(List.of(1, 2));
+
         System.out.println(reversRight(a, 2, queries));
         System.out.println(circularArrayRotation(a,2,queries));
     }
@@ -32,7 +33,7 @@ public class HRCircularArrayRotation {
     private static List<Integer> reversRight(List<Integer> a, int k, List<Integer> queries) {
         List<Integer> result = new ArrayList<>();
 
-        Collections.rotate(a, k);                //Завърта елементите в посочения списък на определеното разстояние = k
+        Collections.rotate(a, k);               // Завърта елементите в посочения списък на определеното разстояние = k
 
         for (Integer query : queries) {
             result.add(a.get(query));
@@ -68,7 +69,7 @@ public class HRCircularArrayRotation {
     }
 
 
-    //flashCoder2001 - Solution:
+    // flashCoder2001 - Solution:
     // Wrong result: [3, 4]
     public static List<Integer> circularArrayRotation(List<Integer> a, int k, List<Integer> queries) {
         k = k % a.size();
