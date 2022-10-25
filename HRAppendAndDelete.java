@@ -67,13 +67,13 @@ public class HRAppendAndDelete {
         }
 
         if (isDifference) {
-            for (int j = index; j < max; j++) {                     // countS = броя различни символа в s
+            for (int j = index; j < max; j++) {                     // countS = броя на различните символа в s
                 countS++;
             }
             for (int j = index; j < min; j++) {
-                countT++;                                           // countT = броя различни символа в t
+                countT++;                                           // countT = броя на различните символа в t
             }
-        } else countS = max / 2;                                    // ... не ми харесва това....
+        } else countS = (max / 2);                                  // ... не ми харесва това....
 
         System.out.println(countS);
 
