@@ -30,7 +30,7 @@ public class HRSequenceEquation {
 
         for (int x = 1; x <= p.size(); x++) {                           // За всяко i от x ...
             for (int i = 0; i < p.size(); i++) {
-                if (p.get(i) == x) {
+                if (p.get(i) == x) {                                    // Търси x в i.
                     int index = i + 1;
                     for (int j = 0; j < p.size(); j++) {                // ... и за всяко j от i...
                         int value = p.get(j);                           //... Провери дали е изпълнено "index = value"
