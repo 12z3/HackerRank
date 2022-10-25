@@ -11,6 +11,7 @@ public class HRCircularArrayRotation {
      * @Source: https://www.hackerrank.com/challenges/circular-array-rotation/problem?utm_campaign=
      * challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
      * @Discussions: <a href="https://www.hackerrank.com/challenges/circular-array-rotation/forum">...</a>
+     *
      * @Problem: John Watson knows of an operation called a right circular rotation on an array of integers.
      * One rotation operation moves the last array element to the first position
      * and shifts all remaining elements right one. To test Sherlock's abilities,
@@ -44,9 +45,9 @@ public class HRCircularArrayRotation {
 
 
     /**
-     * @Issue: Time limit exceeded
+     * @Issue: Time limit exceeded.
      * Your code did not execute within the time limits. Please optimize your code.
-     * For more information on execution time limits, refer to the environment page
+     * For more information on execution time limits, refer to the environment page.
      */
 
     private static List<Integer> reversRightSlow(List<Integer> a, int k, List<Integer> queries) {
