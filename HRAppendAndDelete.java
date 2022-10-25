@@ -49,12 +49,6 @@ public class HRAppendAndDelete {
         boolean isDifference = false;
         String answear = "";
 
-//        if (s.length() <= t.length() && k > t.length()) {
-//            answear += "Yes";
-//        } else if (s.length() > t.length() && k > s.length()) {
-//            answear += "Yes";
-//        } else answear += "No";
-
         if (s.length() > t.length()) {
             min = t.length();
             max = s.length();
