@@ -16,30 +16,36 @@ public class HRAppendAndDelete {
         StringBuilder stb1 = new StringBuilder();
         int count = 0, min = -1, max = 0;
 
-//        String s = "hackerhappy"; // 1
+//        String s = "hackerhappy"; //  hackerhappy
 //        String t = "hackerhappy";
-//        int k = 3;
+//        int k = 9;
 
-//        String s = "hackerrank"; // hackerhappy
-//        String t = "hackerhappy";
+//        String s = "uoiauwrebgiwrhgiuawheirhwebvjforidkslweufgrhvjqasw"; //  Yes
+//        String t = "vgftrheydkoslwezxcvdsqjkfhrydjwvogfheksockelsnbkeq";
+//        int k = 100;
+
+//        String s = "qwerasdf"; //  No
+//        String t = "qwerbsdf";
+//        int k = 6;
+
+//        String s = "hackerhappy"; // hackerrank
+//        String t = "hackerrank";
 //        int k = 9;
 
         String s = "aba"; // hackerhappy
         String t = "abaaba";
         int k = 3;
 
-//        String s = "ashley"; // 3
+//        String s = "ashley"; //
 //        String t = "ash";
 //        int k = 2;
 
 
         System.out.println(compareString(s, t, k));
-        System.out.println(appendAndDelete(s, t, k));
-
     }
 
     private static String compareString(String s, String t, int k) {
-        int count = 0, min = -1, max = 0, index = 0;
+        int countS = 0, countT = 0, min = -1, max = 0, index = 0;
         boolean isDifference = false;
         String answear = "";
 
@@ -48,8 +54,6 @@ public class HRAppendAndDelete {
 //        } else if (s.length() > t.length() && k > s.length()) {
 //            answear += "Yes";
 //        } else answear += "No";
-
-
 
         if (s.length() > t.length()) {
             min = t.length();
@@ -60,7 +64,7 @@ public class HRAppendAndDelete {
         }
 
         for (int i = 0; i < min; i++) {
-            // isDifference = false;
+            // isDifference = false;                               //... там му е мястото, но в случая е ненужно.
             if (s.charAt(i) != t.charAt(i)) {
                 isDifference = true;
                 index = i;
@@ -69,14 +73,17 @@ public class HRAppendAndDelete {
         }
 
         if (isDifference) {
-            for (int j = index; j < max; j++) {
-                count++;
+            for (int j = index; j < max; j++) {                     // countS = броя различни символа в s
+                countS++;
             }
-        } else count = max - min;
+            for (int j = index; j < min; j++) {
+                countT++;                                           // countT = броя различни символа в t
+            }
+        } else countS = max / 2;                                    // ... не ми харесва това....
 
-        System.out.println(count);
+        System.out.println(countS);
 
-        if (count <= k) {
+        if (countT + countS <= k) {
             answear += "Yes";
         } else answear += "No";
 
@@ -122,9 +129,4 @@ public class HRAppendAndDelete {
 //        } else return "No";
 //    }
 
-    public static String appendAndDelete(String s, String t, int k) {
-        // Write your code here
-        int cmp = s.compareTo(t);
-        return cmp <= k ? "Yes" : "No";
-    }
 }
