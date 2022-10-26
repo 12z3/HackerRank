@@ -4,6 +4,7 @@ public class HRAppendAndDelete {
 
     /**
      * ... convert s to t.
+     * -> 3/14 test cases failed :(
      *
      * @Problem: https://www.hackerrank.com/challenges/append-and-delete/problem?utm_campaign=challenge
      * -recommendation&utm_medium=email&utm_source=24-hour-campaign&h_r=next-challenge&h_v=zen&h_r=next
@@ -32,13 +33,13 @@ public class HRAppendAndDelete {
 //        String t = "hackerrank";
 //        int k = 9;
 
-        String s = "aba"; // hackerhappy
-        String t = "abaaba";
-        int k = 3;
+//        String s = "aba"; // hackerhappy
+//        String t = "abaaba";
+//        int k = 3;
 
-//        String s = "ashley"; //
-//        String t = "ash";
-//        int k = 2;
+        String s = "ashley"; //
+        String t = "ashp";
+        int k = 3;
 
 
         System.out.println(compareString(s, t, k));
@@ -47,6 +48,8 @@ public class HRAppendAndDelete {
     private static String compareString(String s, String t, int k) {
         int countS = 0, countT = 0, min = -1, max = 0, index = 0;
         boolean isDifference = false;
+        StringBuilder stabS = new StringBuilder();
+        StringBuilder stabT = new StringBuilder();
         String answear = "";
 
         if (s.length() > t.length()) {
@@ -69,17 +72,21 @@ public class HRAppendAndDelete {
         if (isDifference) {
             for (int j = index; j < max; j++) {                     // countS = броя на различните символа в s
                 countS++;
+                stabS.append(s.charAt(j));
             }
             for (int j = index; j < min; j++) {
                 countT++;                                           // countT = броя на различните символа в t
+                stabT.append(t.charAt(j));
             }
         } else countS = (max / 2);                                  // ... не ми харесва това....
 
-        System.out.println(countS);
-
-        if (countT + countS <= k) {
+        if (k >= (max - min) && (countT + countS) <= k){
             answear += "Yes";
         } else answear += "No";
+
+        System.out.println(stabS);
+        System.out.println(stabT);
+        System.out.println(countS + countT);
 
         return answear;
     }
