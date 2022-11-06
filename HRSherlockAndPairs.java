@@ -18,7 +18,7 @@ public class HRSherlockAndPairs {
          Please optimize your code.
          For more information on execution time limits, refer to the environment page
      */
-
+                                                                        // Отимизирай го... !
     public static int sherlockAndPairs(List<Integer> a) {
         int count = 0;
         for (int i = 0; i < a.size(); i++) {
