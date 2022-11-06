@@ -19,10 +19,10 @@ public class HRConsecutiveSubsequences {
      * 1 2 3
      * 2 3 4
      */
-
+                                                                             // Оправи си кода <-
     public static void main(String[] args) {
-        int[] inp1 = {1, 2, 3, 4, 1}; // num = 3;
-        int[] inp = {1, 2, 1, 2, 1, 2};  // num = 2;
+        int[] inp1 = {1, 2, 3, 4, 1}; // num = 3;       ... О'k
+        int[] inp = {1, 2, 1, 2, 1, 2};  // num = 2;    ... No O'k
         int num = 2;
 
         subsequences(inp, num);
