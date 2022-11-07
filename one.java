@@ -1,45 +1,30 @@
 package hackerRank;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 public class one {
     public static void main(String[] args) {
-        int[] arr = {4, 9, 3, 6, 2};
-        int minIndex = Integer.MAX_VALUE;
+        List<Integer> ls = new ArrayList<>();
 
-        System.out.println(min(arr));
+        int[] a = {1, 2, 3, 6, 7, 8};
 
-        for (int j = 0; j < arr.length ; j++) {
-            if (arr[j] > min(arr)){
-                int tmp = arr[j];
-                arr[j] = arr[minIndex(arr)];
-                arr[minIndex(arr)] = tmp;
-                //minIndex = j;
+        for (int i = 0; i < a.length - 1; i++) {
+            int el1 = a[i], el2 = a[i + 1], index = i + 1;
+
+            while (compare(el1, el2) && index < a.length - 1){
+                ls.add(el1);
+                ls.add(el2);
+                el1 = a[index];
+                el2 = a[index] + 1;
+                index++;
             }
         }
-        System.out.println(Arrays.toString(arr));
 
+        System.out.println(ls);
     }
 
-    public static int min(int[] arr){
-        int min = Integer.MAX_VALUE;
-        int minIndex = Integer.MAX_VALUE;
-
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < min) min = arr[i];
-            minIndex = i;
-        }
-        return min;
+    private static boolean compare(int el1, int el2) {
+        return el1 + 1 == el2;
     }
-    public static int minIndex(int[] arr){
-        int min = Integer.MAX_VALUE;
-        int minIndex = Integer.MAX_VALUE;
-
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < min) min = arr[i];
-            minIndex = i;
-        }
-        return minIndex;
-    }
-
 }
