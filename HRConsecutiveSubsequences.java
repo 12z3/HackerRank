@@ -53,9 +53,9 @@ public class HRConsecutiveSubsequences {
 
             if (inp[i] % num == 0) System.out.println(inp[i]);
 
-            if (inp[i] + 1 == inp[i + 1]) {                                       // ? -> 1, 2
-                sum = inp[i] + inp[i + 1];
-                if (((sum % num) == 0)) {                                         // sum = 1 + 2
+            if (inp[i] + 1 == inp[i + 1]) {                                       // ? -> 1, 2 има последователност
+                sum = inp[i] + inp[i + 1];                                        // sum = 1 + 2
+                if (((sum % num) == 0)) {
                     result.add(inp[i]);
                     result.add(inp[i + 1]);
                     add = true;
@@ -64,10 +64,9 @@ public class HRConsecutiveSubsequences {
                 } //else condition = false;
             } else continue;
 
-
             while (index < inp.length - 1) {
                 if (inp[index] + 1 == inp[index + 1]) {          //  ? -> 2,3; i = 0(1), index = 1(2), index + 1 = 2(3)
-                    sum += inp[index + 1];                                        // sum = (1 + 2) + 3
+                    sum += inp[index + 1];                       // sum = (1 + 2) + 3
                     if ((sum % num) == 0) {
                         if (!add) {
                             result.add(inp[i]);
