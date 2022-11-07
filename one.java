@@ -5,7 +5,7 @@ import java.util.List;
 
 public class one {
     public static void main(String[] args) {
-        List<Integer> ls = new ArrayList<>();
+        List<Integer> ls ;
 
         int[] a = {1, 2, 3, 6, 7, 8};
 
@@ -25,10 +25,11 @@ public class one {
                 el1 = a[index];
                 el2 = a[index + 1];
                 index++;
+                System.out.println(ls);
             }
         }
 
-        System.out.println(ls);                          // [1, 2, 2, 3, 3, 4, 6, 7, 2, 3, 3, 4, 6, 7, 6, 7]
+//        System.out.println(ls);                          // [1, 2, 2, 3, 3, 4, 6, 7, 2, 3, 3, 4, 6, 7, 6, 7]
     }
 
     private static boolean compare(int el1, int el2) {
