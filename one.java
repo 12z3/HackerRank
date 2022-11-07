@@ -21,7 +21,7 @@ public class one {
             }
         }
 
-        System.out.println(ls);
+        System.out.println(ls);                          // [1, 2, 2, 3, 3, 4, 6, 7, 2, 3, 3, 4, 6, 7, 6, 7]
     }
 
     private static boolean compare(int el1, int el2) {
