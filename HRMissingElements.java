@@ -1,12 +1,12 @@
 package hackerRank;
 
-import org.jetbrains.annotations.NotNull;
+
 import training.Methods;
 import java.util.Scanner;
 
 public class HRMissingElements extends Methods {
 
-    private static int @NotNull [] removeDuplicateElements(int[] arr) {
+    private static int [] removeDuplicateElements(int[] arr) {
         int countDuplicate = 0, index = 0;
         boolean isChecked = false;
         int[] checkedElements = new int[arr.length];
