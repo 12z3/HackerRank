@@ -7,7 +7,10 @@ public class HRMedian {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.print("Enter a array size: ");
         int n = Integer.parseInt(scanner.nextLine());
+
+        System.out.print("Enter array elements separate by space ");
         String[] line = scanner.nextLine().split(" ");
 
         List<Integer> a = new ArrayList<>();
@@ -19,30 +22,20 @@ public class HRMedian {
         System.out.println(findMedian(a));;
     }
 
-    private static int findMedian(List<Integer> a) {
+    private static double findMedian(List<Integer> a) {
         Collections.sort(a);
 
-        int median = 0, index = 0;
+        double median = 0;
+        int index = 0;
+
         if (a.size() % 2 != 0) {
             index = (a.size() / 2);
             median = a.get(index);
         } else {
             index = (a.size() / 2) - 1;
-            median = (a.get(index) + a.get(index + 1)) / 2;
+            median = (double)(a.get(index) + a.get(index + 1)) / 2;
         }
         return median;
     }
 
-//    private static int findMedian(List<Integer> a) {
-//        int median, index;
-//
-//        if (a.size() % 2 != 0) {
-//            index = (a.size() / 2);
-//            median = a.get(index);
-//        } else {
-//            index = (a.size() / 2) - 1;
-//            median = (a.get(index) + a.get(index + 1)) / 2;
-//        }
-//        return median;
-//    }
 }
