@@ -10,16 +10,16 @@ public class HRMedian {
         System.out.print("Enter a array size: ");
         int n = Integer.parseInt(scanner.nextLine());
 
-        System.out.print("Enter array elements separate by space ");
+        System.out.print("Enter array elements separate by 'space' ");
         String[] line = scanner.nextLine().split(" ");
 
         List<Integer> a = new ArrayList<>();
 
-       for (String el: line){
-           a.add(Integer.parseInt(el));
-       }
+        for (String el : line) {
+            a.add(Integer.parseInt(el));
+        }
 
-        System.out.println(findMedian(a));;
+        System.out.println(findMedian(a));
     }
 
     private static double findMedian(List<Integer> a) {
@@ -33,9 +33,8 @@ public class HRMedian {
             median = a.get(index);
         } else {
             index = (a.size() / 2) - 1;
-            median = (double)(a.get(index) + a.get(index + 1)) / 2;
+            median = (double) (a.get(index) + a.get(index + 1)) / 2;
         }
         return median;
     }
-
 }
