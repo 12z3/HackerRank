@@ -21,7 +21,7 @@ public class SubsequencesHR {
      * For each test case, output the number of consecutive subsequenences whose sum is divisible by k in a newline.
      * <p></p>
      * https://www.hackerrank.com/challenges/consecutive-subsequences/problem?utm_campaign=challenge-
-       recommendation&utm_medium=email&utm_source=24-hour-campaign&h_r=next-challenge&h_v=zen
+    recommendation&utm_medium=email&utm_source=24-hour-campaign&h_r=next-challenge&h_v=zen
 
      * @Discussions: https://www.hackerrank.com/challenges/consecutive-subsequences/forum
      *
@@ -41,20 +41,20 @@ public class SubsequencesHR {
      */
 
     /**
-     *  ? ...  1, 2, 3, 4, 1
-     *  ? ...  1, 2, 3, 4
-     *  ? ...  1, 2, 3
-     *  ? ...  1, 2
+     * ? ...  1, 2, 3, 4, 1
+     * ? ...  1, 2, 3, 4
+     * ? ...  1, 2, 3
+     * ? ...  1, 2
      */
 
     public static void main(String[] args) {
 
         int[] a2 = {1, 2, 3, 6, 7, 8};
-        int[] a3 = {3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 8, 3, 4, 6, 7};
+        int[] a = {3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 8, 3, 4, 6, 7};
         int[] a1 = {3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 8, 3, 4, 5, 6};
 
         int[] a13 = {1, 2, 1, 2, 1, 2};    // k = 2
-        int[] a = {1, 2, 3, 4, 1};         // k = 3
+        int[] a3 = {1, 2, 3, 4, 1};         // k = 3
 
 //        Scanner scanner = new Scanner(System.in);
 //        String[] input = scanner.nextLine().split(" ");
@@ -68,7 +68,8 @@ public class SubsequencesHR {
 //            a[i] = Integer.parseInt(input1[i]);
 //        }
 
-        System.out.println(consecutiveSubsequences1(a, 3));;
+        consecutiveSubsequences(a, 3);
+        //  System.out.println(consecutiveSubsequences1(a, 3));;
     }
 
     private static int consecutiveSubsequences1(int[] a, int k) {
@@ -104,37 +105,43 @@ public class SubsequencesHR {
 
     private static void consecutiveSubsequences(int[] a, int k) {
         List<Integer> ls;
-        int countConnectives = 0;
+        List<Integer> maxLs = new ArrayList<>();
+        int countConnectives = 0, max = Integer.MIN_VALUE;
 
         for (int i = 0; i < a.length - 1; i++) {
             boolean PreviouslyAdded = false;
 
             ls = new ArrayList<>();
             int el1 = a[i], el2 = a[i + 1],
-                    index = i + 1, endElIdx = a.length - 1, sum = el1 + el2;
+                    index = i + 1, endElIdx = a.length - 1, sum = 0;
             countConnectives++;
 
-            // if (!checkConditionFromSum(sum, k)) continue;
 
             while (compare(el1, el2) && index < endElIdx) {
                 if (!PreviouslyAdded) ls.add(el1);
+                PreviouslyAdded = true;
                 ls.add(el2);
                 System.out.println(ls);
-                PreviouslyAdded = true;
                 el1 = a[index];
                 el2 = a[index + 1];
-                // i = index;                     // <-
-                sum += (el2);
-                if (!checkConditionFromSum(sum, k)) break;
+                i = index;                     // <-
                 index++;
             }
             if ((index == endElIdx) && (el2 == el1 + 1)) {
                 if (!PreviouslyAdded) ls.add(el1);
                 ls.add(el2);
             }
-            System.out.println(ls);
+
+            System.out.println(ls + " -> " + sumOfListEl(ls));
+            System.out.println(sum);
+            System.out.println("------------------------------- ");
+
+            if (sumOfListEl(ls) > max) {
+                max = sumOfListEl(ls);
+                maxLs = ls;
+            }
         }
-        System.out.println(countConnectives);
+        System.out.println(maxLs + " -> " + max);
     }
 
     private static boolean compare(int el1, int el2) {
@@ -145,5 +152,11 @@ public class SubsequencesHR {
     private static boolean checkConditionFromSum(int sum, int k) {
         if (sum % k == 0) return true;
         return false;
+    }
+
+    private static int sumOfListEl(List<Integer> list) {
+        int sum = 0;
+        for (Integer el : list) sum += el;
+        return sum;
     }
 }
