@@ -14,6 +14,7 @@ public class MaximumSubarray {
     private static List<Integer> maximumSubarray(List<Integer> arr){
         List<Integer> maxLs = new ArrayList<>();
         List<Integer> idx = null;
+        List<Integer> idx1 = null;
         List<Integer> ls;
         int sum = 0, max = Integer.MIN_VALUE, index, sumIdx = 0;
 
@@ -21,6 +22,7 @@ public class MaximumSubarray {
         for (int i = 0; i < arr.size(); i++) {
             ls = new ArrayList<>();
             idx = new ArrayList<>();
+            idx1 = new ArrayList<>();
             sum = 0;
             index = i + 1;
             sum = arr.get(i);
@@ -31,21 +33,22 @@ public class MaximumSubarray {
                 ls.add(arr.get(index));
                 sum  += arr.get(index);
 
-                
+
                 idx.add(index);
                 index++;
             }
             if (sum > max) {
                 max = sum;
                 maxLs = ls;
+                idx1 = idx;
             }
         }
 
-        for (int i = 0; i < maxLs.size(); i++) {
+        for (int i = 0; i < idx1.size(); i++) {
             sumIdx += i;
         }
         System.out.println(maxLs + " = " + max + " / " + sumIdx);
-        System.out.println(idx);
+        System.out.println(idx1);
         return maxLs;
     }
 }
