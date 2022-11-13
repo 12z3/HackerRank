@@ -4,6 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HRTheMaximumSubarray {
+
+    /**
+     * @Problem: We define subsequence as any subset of an array.
+     * We define a subarray as a contiguous subsequence in an array.
+     * Given an array, find the maximum possible sum among:
+     * all nonempty subarrays.
+     * all nonempty subsequences.
+     * Print the two values as space-separated integers on one line.
+     * Note that empty subarrays/subsequences should not be considered.
+     * <p>
+     * https://www.hackerrank.com/challenges/maxsubarray/
+    problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
+     *</p>
+     * @Discussions: <a href="https://www.hackerrank.com/challenges/maxsubarray/forum">...</a>
+     * @Issue: Time limit exceeded
+     */
+
     public static void main(String[] args) {
 
         List<Integer> a21 = new ArrayList<>(List.of(3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 8, 3, 4, 6, 7));
