@@ -15,7 +15,7 @@ public class HRTheMaximumSubarray {
      * Note that empty subarrays/subsequences should not be considered.
      * <p>
      * https://www.hackerrank.com/challenges/maxsubarray/
-    problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
+              problem?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign
      *</p>
      * @Discussions: <a href="https://www.hackerrank.com/challenges/maxsubarray/forum">...</a>
      * @Issue: Time limit exceeded
@@ -23,11 +23,11 @@ public class HRTheMaximumSubarray {
 
     public static void main(String[] args) {
 
-        List<Integer> a21 = new ArrayList<>(List.of(3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 8, 3, 4, 6, 7));
-        List<Integer> a22 = new ArrayList<>(List.of(1, 2, 3, 4));
-        List<Integer> a = new ArrayList<>(List.of(-1, 2, 3, -4, 5, 10));
+        List<Integer> arr1 = new ArrayList<>(List.of(3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 8, 3, 4, 6, 7));
+        List<Integer> arr2 = new ArrayList<>(List.of(1, 2, 3, 4));
+        List<Integer> arr = new ArrayList<>(List.of(-1, 2, 3, -4, 5, 10));
 
-        consecutiveSubsequences(a);
+        consecutiveSubsequences(arr);
     }
 
     /**
@@ -45,7 +45,7 @@ public class HRTheMaximumSubarray {
 
             ls = new ArrayList<>();
             int el1 = arr.get(i), el2 = arr.get(i + 1),
-                    index = i + 1, endElIdx = arr.size() - 1, sum = 0;
+                    index = i + 1, endElIdx = arr.size() - 1;
 
             while (index < endElIdx) { // compare(el1, el2) &&
                 if (!PreviouslyAdded) ls.add(el1);
