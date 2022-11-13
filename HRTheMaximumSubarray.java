@@ -28,7 +28,6 @@ public class HRTheMaximumSubarray {
         List<Integer> a = new ArrayList<>(List.of(-1, 2, 3, -4, 5, 10));
 
         consecutiveSubsequences(a);
-
     }
 
     /**
@@ -36,7 +35,6 @@ public class HRTheMaximumSubarray {
      * Your code did not execute within the time limits.
      * Please optimize your code.
      */
-
     private static void consecutiveSubsequences(List<Integer> arr) {
         List<Integer> ls;
         List<Integer> maxLs = new ArrayList<>();
