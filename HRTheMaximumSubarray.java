@@ -6,6 +6,7 @@ import java.util.List;
 public class HRTheMaximumSubarray {
 
     /**
+     * @Source: <a href="https://www.youtube.com/watch?v=5QKoQzR0iGY">...</a>
      * @Problem: We define subsequence as any subset of an array.
      * We define a subarray as a contiguous subsequence in an array.
      * Given an array, find the maximum possible sum among:
