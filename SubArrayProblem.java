@@ -1,6 +1,7 @@
 package hackerRank;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class SubArrayProblem {
@@ -10,6 +11,7 @@ public class SubArrayProblem {
 
         maxSubArray(arr);
         System.out.println(maxSubArrays(arr));
+        System.out.println(maxSubArray1(arr));
     }
 
     private static void maxSubArray(List<Integer> arr) {
@@ -61,6 +63,7 @@ public class SubArrayProblem {
         System.out.println(result);
     }
 
+    // Solutions from Discussions:
     public static List<Integer> maxSubArrays(List<Integer> arr) {
         int maxSA = arr.get(0); // max sub array
         int maxSS = arr.get(0); // max sub sequences
@@ -77,5 +80,25 @@ public class SubArrayProblem {
         list.add(maxSA);
         list.add(maxSS);
         return list;
+    }
+
+    public static List<Integer> maxSubArray1(List<Integer> arr) {
+        ArrayList<Integer> al = new ArrayList<>();
+        int sum = 0, j = 0, maxI = -999999;
+
+        for (int i = 0; i < arr.size(); i++) {
+            sum += arr.get(i);                                // Сумата от всички последователни елементи.
+            if (sum < 0) sum = 0;
+            maxI = Math.max(maxI, sum);
+            if (arr.get(i) > 0)                              // Сумата от всички положителни елементи
+                j += arr.get(i);
+        }
+        if (j == 0) {
+            j = Collections.max(arr);
+            maxI = j;
+        }
+        al.add(maxI);
+        al.add(j);
+        return al;
     }
 }
