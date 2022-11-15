@@ -78,13 +78,14 @@ public class SubArrayProblem {
     }
 
     // Solutions from Discussions:
+    // Maximum Subarray (Kadane's) Algorithm: SA-> SubArray, SS -> SubSequences.
     public static List<Integer> maxSubArrays(List<Integer> arr) {
         int maxSA = arr.get(0); // max sub array
         int maxSS = arr.get(0); // max sub sequences
         int max = arr.get(0);
 
         for (int i = 1; i < arr.size(); i++) {               // (-1, 2, 3, -4, 5, 10)
-            max = Math.max(max + arr.get(i), arr.get(i));    // max = Math.max(-1 + 2, 2) = 2
+            max = Math.max(max + arr.get(i), arr.get(i));    // max стойност на подмасива до текущия индекс
             maxSA = Math.max(maxSA, max);                    // maxSA = Math.max(-1, 2) = 2 -> сумата на подредицата?
 
             maxSS = Math.max(Math.max(maxSS, arr.get(i)), maxSS + arr.get(i));
